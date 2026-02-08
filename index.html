@@ -3,116 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortis Engineering | sierraleonebuild</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Fortis Engineering | Building Timeless Excellence in Sierra Leone</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
     <style>
         :root {
             --white: #FFFFFF;
+            --beige: #F8F5F0;
             --gold: #D4AF37;
             --charcoal: #1A1A1A;
+            --gray: #4A4A4A;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        html { font-size: 13px; scroll-behavior: smooth; }
+        /* Масштаб для ноутбуков */
+        html { font-size: 14px; scroll-behavior: smooth; }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--white); color: var(--charcoal); line-height: 1.4; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--white); color: var(--charcoal); line-height: 1.6; }
 
         .top-bar {
             position: fixed; top: 0; width: 100%;
             background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px);
-            z-index: 1000; padding: 10px 5%; border-bottom: 1px solid rgba(0,0,0,0.05);
-            display: flex; justify-content: center; align-items: center; gap: 25px;
+            z-index: 1000; padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex; justify-content: center; align-items: center; gap: 30px;
         }
 
         .top-bar a {
-            color: var(--charcoal); font-weight: 600; font-size: 0.75rem;
-            text-transform: uppercase; letter-spacing: 1px; text-decoration: none;
-            display: flex; align-items: center; gap: 5px;
+            color: var(--gray); font-weight: 600; font-size: 0.8rem;
+            display: flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px;
+            text-decoration: none;
         }
 
         .hero {
-            height: 65vh; min-height: 450px;
+            height: 80vh; min-height: 600px;
             display: flex; align-items: center; justify-content: center; text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero.jpg') no-repeat center center/cover;
-            color: var(--white); padding: 20px; background-color: #1a1a1a;
+            /* Используем hero.jpg из корня */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('hero.jpg') no-repeat center center;
+            background-size: cover; color: var(--white); padding: 20px;
         }
 
-        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 5px; text-transform: uppercase; font-weight: 800; }
-        .hero h2 { font-size: 0.85rem; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; color: var(--gold); }
-        .hero p { font-size: 1rem; max-width: 700px; margin: 0 auto 25px; font-style: italic; font-weight: 300; }
-
+        .hero h1 { font-size: clamp(3rem, 8vw, 5rem); margin-bottom: 10px; text-transform: uppercase; font-weight: 800; letter-spacing: -2px; }
+        .hero h2 { font-size: 1.1rem; font-weight: 400; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 30px; color: var(--gold); }
         .btn {
-            display: inline-block; padding: 12px 35px; background: var(--white); color: var(--charcoal);
-            border-radius: 50px; font-weight: 700; text-transform: uppercase; font-size: 0.75rem;
-            text-decoration: none; transition: 0.3s;
+            display: inline-block; padding: 18px 45px; background: var(--white); color: var(--charcoal);
+            border-radius: 50px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem;
+            text-decoration: none; transition: var(--transition);
         }
+        .btn:hover { background: var(--gold); color: var(--white); transform: translateY(-3px); }
 
-        section { padding: 40px 8%; }
-        .section-title { text-align: center; font-size: 1.6rem; margin-bottom: 35px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; }
+        section { padding: 100px 8%; }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 4px; font-weight: 700; }
 
         .grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px; max-width: 1300px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px; max-width: 1400px; margin: 0 auto;
         }
 
-        .card { position: relative; height: 300px; overflow: hidden; background: #000; border-radius: 4px; }
-        .card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+        .card { position: relative; height: 450px; overflow: hidden; background: #000; }
+        .card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: transform 1.2s ease; }
+        .card:hover img { transform: scale(1.08); }
 
         .card-overlay {
-            position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px;
+            position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px;
             background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: var(--white);
         }
-        .card-overlay h3 { font-size: 1rem; text-transform: uppercase; color: var(--gold); }
+        .card-overlay h3 { font-size: 1.2rem; text-transform: uppercase; margin-bottom: 8px; color: var(--gold); }
 
-        footer { background: var(--charcoal); color: var(--white); padding: 40px 8%; text-align: center; }
-        .footer-address { margin-bottom: 15px; font-size: 0.9rem; letter-spacing: 1px; }
-        .footer-links a { color: var(--gold); margin: 0 10px; text-decoration: none; font-size: 0.8rem; }
+        #map { height: 500px; width: 100%; max-width: 1200px; margin: 40px auto; filter: grayscale(1); border: 1px solid rgba(0,0,0,0.05); }
+
+        footer {
+            background: var(--charcoal); color: var(--white); padding: 80px 8% 40px;
+            display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;
+        }
+        .footer-right a { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; text-decoration: none; color: white; }
 
         @media (max-width: 768px) {
-            .hero { height: 55vh; }
-            .grid { grid-template-columns: 1fr; }
+            .footer-right, .footer-left { text-align: center; width: 100%; }
+            .footer-right a { justify-content: center; }
         }
     </style>
 </head>
 <body>
 
     <nav class="top-bar">
-        <a href="mailto:kt@krent.sl">📧 kt@krent.sl</a>
-        <a href="https://instagram.com/sierraleonebuild" target="_blank">📸 Instagram: @sierraleonebuild</a>
+        <a href="mailto:kt@krent.sl"><span>📧</span> kt@krent.sl</a>
+        <a href="https://instagram.com/sierraleonebuild" target="_blank">Instagram</a>
     </nav>
 
     <header class="hero">
         <div class="hero-content">
             <h1>Fortis Engineering</h1>
             <h2>Construction Services in Sierra Leone</h2>
-            <p>“Africa is not just a place on the map; it is the feature of the world’s emerging landscape and the future of sustainable growth.”</p>
             <a href="mailto:kt@krent.sl" class="btn">Start Your Vision</a>
         </div>
     </header>
 
-    <section id="operations">
+    <section class="works">
         <h2 class="section-title">Field Operations</h2>
         <div class="grid">
-            <div class="card"><img src="land.jpg" alt="Land"><div class="card-overlay"><h3>Land Selection</h3><p>Due Diligence & Site Acquisition</p></div></div>
-            <div class="card"><img src="earthmoving.jpg" alt="Earthmoving"><div class="card-overlay"><h3>Earthmoving</h3><p>Excavation & Site Preparation</p></div></div>
-            <div class="card"><img src="concrete.jpg" alt="Concrete"><div class="card-overlay"><h3>Concrete & Reinforcement</h3><p>Structural Engineering Excellence</p></div></div>
-            <div class="card"><img src="wood.jpg" alt="Materials"><div class="card-overlay"><h3>Selection of Materials</h3><p>Premium Quality Procurement</p></div></div>
-            <div class="card"><img src="exc2.jpg" alt="Equipment"><div class="card-overlay"><h3>Rental of Equipment</h3><p>Heavy Machinery Fleet Solutions</p></div></div>
-            <div class="card"><img src="b2.jpg" alt="Consulting"><div class="card-overlay"><h3>Technical Consulting</h3><p>Machinery Advisory</p></div></div>
+            <div class="card">
+                <img src="land.jpg" alt="Land Acquisition">
+                <div class="card-overlay">
+                    <h3>Land Selection</h3>
+                    <p>Due Diligence & Site Acquisition</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="wood.jpg" alt="Material Selection">
+                <div class="card-overlay">
+                    <h3>Selection of Materials</h3>
+                    <p>Premium Quality Procurement</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="earthmoving.jpg" alt="Heavy Earthmoving">
+                <div class="card-overlay">
+                    <h3>Earthmoving</h3>
+                    <p>Excavation & Site Preparation</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="concrete.jpg" alt="Concrete Reinforcement">
+                <div class="card-overlay">
+                    <h3>Concrete & Reinforcement</h3>
+                    <p>Structural Engineering Excellence</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="b2.jpg" alt="Equipment Advisory">
+                <div class="card-overlay">
+                    <h3>Selection of Equipment</h3>
+                    <p>Technical Machinery Consulting</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="exc2.jpg" alt="Machinery Rental">
+                <div class="card-overlay">
+                    <h3>Rental of Equipment</h3>
+                    <p>Heavy Machinery Fleet Solutions</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <div id="map"></div>
+
     <footer>
-        <div class="footer-address">
-            <p>Fortis Engineering</p>
-            <p>Freetown, Sierra Leone 🇸🇱</p>
+        <div class="footer-left">
+            <h3>Fortis Engineering 🇸🇱</h3>
+            <p>Freetown, Sierra Leone</p>
         </div>
-        <div class="footer-links">
-            <a href="mailto:kt@krent.sl">Email</a>
-            <a href="https://instagram.com/sierraleonebuild" target="_blank">Instagram</a>
+        <div class="footer-right">
+            <a href="mailto:kt@krent.sl">📧 kt@krent.sl</a>
+            <a href="https://instagram.com/sierraleonebuild" target="_blank" style="color:var(--gold);">Instagram: @sierraleonebuild</a>
         </div>
-        <p style="margin-top: 20px; opacity: 0.5; font-size: 0.7rem;">Building Timeless Excellence © 2026</p>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map', { scrollWheelZoom: false, attributionControl: false }).setView([8.48, -13.23], 10);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(map);
+        const goldIcon = L.divIcon({
+            className: 'custom-div-icon',
+            html: "<div style='background-color:#D4AF37; width:12px; height:12px; border-radius:50%; border:2px solid white;'></div>",
+            iconSize: [12, 12], iconAnchor: [6, 6]
+        });
+        L.marker([8.48, -13.23], {icon: goldIcon}).addTo(map);
+    </script>
 </body>
 </html>
