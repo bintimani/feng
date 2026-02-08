@@ -3,230 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortis Engineering | Heavy Equipment Rental Sierra Leone</title>
+    <title>Fortis Engineering | sierraleonebuild</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
+            --white: #FFFFFF;
             --gold: #D4AF37;
             --charcoal: #1A1A1A;
-            --white: #FFFFFF;
-            --gray: #f8f8f8;
-            --transition: all 0.3s ease;
         }
+
+        html { font-size: 13px; scroll-behavior: smooth; }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.5; color: #333; background-color: var(--white); }
+        body { font-family: 'Inter', sans-serif; background-color: var(--white); color: var(--charcoal); line-height: 1.4; }
 
-        /* Навигация стала компактнее */
-        header { 
-            background: var(--charcoal); 
-            color: white; 
-            padding: 12px 5%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            position: sticky; 
-            top: 0; 
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
-        nav a { 
-            color: white; 
-            text-decoration: none; 
-            margin-left: 15px; 
-            font-size: 0.8rem; 
-            text-transform: uppercase; 
-            letter-spacing: 1px;
-            opacity: 0.9;
-        }
-        nav a:hover { color: var(--gold); }
-
-        /* Герой-секция уменьшена для ноутбуков */
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('hero.jpg') no-repeat center/cover; 
-            height: 55vh; /* Уменьшено с 60vh */
-            min-height: 400px;
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            color: white; 
-            text-align: center; 
-            padding: 0 20px; 
-            background-color: #222; 
-        }
-        .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 10px; text-transform: uppercase; }
-        .hero p { font-size: clamp(0.9rem, 2vw, 1.1rem); max-width: 600px; opacity: 0.9; font-weight: 300; }
-        
-        .btn { 
-            background: var(--gold); 
-            color: white; 
-            padding: 12px 28px; 
-            text-decoration: none; 
-            border-radius: 4px; 
-            font-weight: 600; 
-            font-size: 0.85rem;
-            margin-top: 25px; 
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: var(--transition); 
-        }
-        .btn:hover { background: #b8952d; transform: translateY(-2px); }
-
-        /* Секция флота */
-        section { padding: 60px 8%; }
-        h2 { text-align: center; font-size: 1.8rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
-        .subtitle { text-align: center; color: #666; font-size: 0.95rem; margin-bottom: 40px; }
-
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 20px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
+        .top-bar {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px);
+            z-index: 1000; padding: 10px 5%; border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex; justify-content: center; align-items: center; gap: 25px;
         }
 
-        /* Карточки стали компактнее */
-        .card { 
-            border: 1px solid #eee; 
-            border-radius: 4px; 
-            background: white; 
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-        }
-        .card:hover { border-color: var(--gold); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .card-content { padding: 25px; }
-        .card h3 { color: var(--charcoal); margin-bottom: 15px; font-size: 1.1rem; border-left: 3px solid var(--gold); padding-left: 10px; }
-        
-        .card ul { list-style: none; }
-        .card li { 
-            margin-bottom: 8px; 
-            font-size: 0.85rem; 
-            color: #555;
-            display: flex;
-            justify-content: space-between;
-        }
-        .card li::before { content: "•"; color: var(--gold); margin-right: 8px; display: none; }
-
-        .status { 
-            display: inline-block;
-            margin-top: 15px;
-            font-size: 0.7rem; 
-            font-weight: 700; 
-            color: #aaa; 
-            text-transform: uppercase; 
-            letter-spacing: 1px;
-            border: 1px solid #eee;
-            padding: 2px 8px;
+        .top-bar a {
+            color: var(--charcoal); font-weight: 600; font-size: 0.75rem;
+            text-transform: uppercase; letter-spacing: 1px; text-decoration: none;
+            display: flex; align-items: center; gap: 5px;
         }
 
-        /* О компании */
-        .about { background: var(--gray); }
-        .about p { max-width: 750px; margin: 0 auto; font-size: 1rem; color: #444; text-align: center; line-height: 1.7; }
+        .hero {
+            height: 65vh; min-height: 450px;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero.jpg') no-repeat center center/cover;
+            color: var(--white); padding: 20px; background-color: #1a1a1a;
+        }
 
-        /* Футер */
-        footer { background: var(--charcoal); color: white; padding: 50px 8% 30px; text-align: center; }
-        .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .footer-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; }
-        .footer-links a:hover { color: var(--gold); }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; opacity: 0.5; font-size: 0.75rem; letter-spacing: 1px; }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 5px; text-transform: uppercase; font-weight: 800; }
+        .hero h2 { font-size: 0.85rem; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; color: var(--gold); }
+        .hero p { font-size: 1rem; max-width: 700px; margin: 0 auto 25px; font-style: italic; font-weight: 300; }
 
-        /* Адаптация для мобильных устройств */
+        .btn {
+            display: inline-block; padding: 12px 35px; background: var(--white); color: var(--charcoal);
+            border-radius: 50px; font-weight: 700; text-transform: uppercase; font-size: 0.75rem;
+            text-decoration: none; transition: 0.3s;
+        }
+
+        section { padding: 40px 8%; }
+        .section-title { text-align: center; font-size: 1.6rem; margin-bottom: 35px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; }
+
+        .grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px; max-width: 1300px; margin: 0 auto;
+        }
+
+        .card { position: relative; height: 300px; overflow: hidden; background: #000; border-radius: 4px; }
+        .card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+
+        .card-overlay {
+            position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: var(--white);
+        }
+        .card-overlay h3 { font-size: 1rem; text-transform: uppercase; color: var(--gold); }
+
+        footer { background: var(--charcoal); color: var(--white); padding: 40px 8%; text-align: center; }
+        .footer-address { margin-bottom: 15px; font-size: 0.9rem; letter-spacing: 1px; }
+        .footer-links a { color: var(--gold); margin: 0 10px; text-decoration: none; font-size: 0.8rem; }
+
         @media (max-width: 768px) {
-            header { flex-direction: column; padding: 15px; gap: 10px; }
-            .logo { font-size: 1.1rem; }
-            nav { display: flex; gap: 10px; }
-            nav a { margin: 0; font-size: 0.7rem; }
-            
-            .hero { height: 50vh; min-height: 350px; }
-            .hero h1 { font-size: 2.2rem; }
-            
-            section { padding: 40px 5%; }
+            .hero { height: 55vh; }
             .grid { grid-template-columns: 1fr; }
-            
-            .card-content { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">Fortis Engineering 🇸🇱</div>
-        <nav>
-            <a href="mailto:kt@krent.sl">📧 Email</a>
-            <a href="https://instagram.com/sierraleonebuild" target="_blank">📸 Instagram</a>
-        </nav>
+    <nav class="top-bar">
+        <a href="mailto:kt@krent.sl">📧 kt@krent.sl</a>
+        <a href="https://instagram.com/sierraleonebuild" target="_blank">📸 Instagram: @sierraleonebuild</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Fortis Engineering</h1>
+            <h2>Construction Services in Sierra Leone</h2>
+            <p>“Africa is not just a place on the map; it is the feature of the world’s emerging landscape and the future of sustainable growth.”</p>
+            <a href="mailto:kt@krent.sl" class="btn">Start Your Vision</a>
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>Heavy Equipment</h1>
-        <p>Reliable excavators, bulldozers & machinery delivered directly to your project site[cite: 1, 5].</p>
-        <a href="mailto:kt@krent.sl" class="btn">Get a Quote [cite: 7]</a>
-    </section>
-
-    <section id="fleet">
-        <h2>Our Fleet</h2>
-        <p class="subtitle">Premium machinery ready for the toughest terrain.</p>
-        
+    <section id="operations">
+        <h2 class="section-title">Field Operations</h2>
         <div class="grid">
-            <div class="card">
-                <div class="card-content">
-                    <h3>CAT 320D Excavator </h3>
-                    <ul>
-                        <li><span>Engine</span> <strong>Cat C4.4 (160 hp)</strong></li>
-                        <li><span>Weight</span> <strong>20.7 t</strong></li>
-                        <li><span>Max Depth</span> <strong>6.7 m</strong></li>
-                        <li><span>Systems</span> <strong>Advanced Hydraulics</strong></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h3>Excavator Fleet </h3>
-                    <ul>
-                        <li>Various sizes available</li>
-                        <li>Fuel-efficient engines</li>
-                        <li>Low-noise cabins</li>
-                        <li>Telematics systems</li>
-                    </ul>
-                    <span class="status">Coming Soon </span>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h3>Bulldozers </h3>
-                    <ul>
-                        <li>Powerful track dozers</li>
-                        <li>High blade capacity</li>
-                        <li>Heavy-duty undercarriage</li>
-                        <li>Excellent stability</li>
-                    </ul>
-                    <span class="status">Coming Soon </span>
-                </div>
-            </div>
+            <div class="card"><img src="land.jpg" alt="Land"><div class="card-overlay"><h3>Land Selection</h3><p>Due Diligence & Site Acquisition</p></div></div>
+            <div class="card"><img src="earthmoving.jpg" alt="Earthmoving"><div class="card-overlay"><h3>Earthmoving</h3><p>Excavation & Site Preparation</p></div></div>
+            <div class="card"><img src="concrete.jpg" alt="Concrete"><div class="card-overlay"><h3>Concrete & Reinforcement</h3><p>Structural Engineering Excellence</p></div></div>
+            <div class="card"><img src="wood.jpg" alt="Materials"><div class="card-overlay"><h3>Selection of Materials</h3><p>Premium Quality Procurement</p></div></div>
+            <div class="card"><img src="exc2.jpg" alt="Equipment"><div class="card-overlay"><h3>Rental of Equipment</h3><p>Heavy Machinery Fleet Solutions</p></div></div>
+            <div class="card"><img src="b2.jpg" alt="Consulting"><div class="card-overlay"><h3>Technical Consulting</h3><p>Machinery Advisory</p></div></div>
         </div>
-    </section>
-
-    <section class="about">
-        <h2>About Fortis [cite: 1, 11]</h2>
-        <p>
-            Based in Freetown, we provide reliable, well-maintained machinery for construction, mining, and infrastructure projects across Sierra Leone[cite: 1, 2]. 
-            With extensive experience in diverse conditions [cite: 3], all our equipment undergoes rigorous inspections to ensure maximum safety and zero downtime[cite: 4, 5].
-        </p>
     </section>
 
     <footer>
+        <div class="footer-address">
+            <p>Fortis Engineering</p>
+            <p>Freetown, Sierra Leone 🇸🇱</p>
+        </div>
         <div class="footer-links">
-            <a href="mailto:kt@krent.sl">Email: kt@krent.sl [cite: 8, 9]</a>
-            <a href="https://instagram.com/sierraleonebuild" target="_blank">Instagram: @sierraleonebuild </a>
+            <a href="mailto:kt@krent.sl">Email</a>
+            <a href="https://instagram.com/sierraleonebuild" target="_blank">Instagram</a>
         </div>
-        <div class="footer-bottom">
-            &copy; 2026 Fortis Engineering. All rights reserved[cite: 7, 11].
-            <br>Freetown, Sierra Leone 🇸🇱 [cite: 8]
-        </div>
+        <p style="margin-top: 20px; opacity: 0.5; font-size: 0.7rem;">Building Timeless Excellence © 2026</p>
     </footer>
 
 </body>
