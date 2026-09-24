@@ -2,299 +2,1039 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Fortis Engineering | Construction & Equipment Services Freetown, Sierra Leone</title>
-    <meta name="description" content="Fortis Engineering: Land acquisition, earthmoving, concrete work & equipment rental in Freetown, Sierra Leone. Contact @sierraleonebuild on Instagram."/>
-    <meta name="keywords" content="construction Sierra Leone, Fortis Engineering, land acquisition Freetown, earthmoving services, equipment rental, concrete reinforcement, building contractors"/>
-    
-    <link rel="canonical" href="https://fortis.sl/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FBFAF7">
+
+    <title>Construction & Consulting in Sierra Leone | Konstatines</title>
+    <meta name="description" content="Construction and field operations in Sierra Leone. Consulting, data analytics, GIS mapping and real estate intelligence delivered remotely across Africa."/>
     <meta name="robots" content="index, follow"/>
-    
+    <link rel="canonical" href="https://fortis.sl/"/>
+
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://fortis.sl/"/>
-    <meta property="og:title" content="Fortis Engineering | Construction Services Sierra Leone"/>
-    <meta property="og:description" content="Land selection, earthmoving, concrete work & equipment solutions. Instagram: @sierraleonebuild"/>
+    <meta property="og:title" content="Construction & Consulting in Sierra Leone | Konstatines"/>
+    <meta property="og:description" content="Construction in Sierra Leone. Consulting, analytics and GIS mapping across Africa."/>
     <meta property="og:image" content="https://fortis.sl/hero.jpg"/>
-    <meta property="og:site_name" content="Fortis Engineering"/>
+    <meta property="og:image:alt" content="Construction and consulting services in Sierra Leone"/>
+    <meta property="og:site_name" content="Konstatines Consulting"/>
     <meta property="og:locale" content="en_SL"/>
-    
+
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Fortis Engineering | Construction Sierra Leone"/>
-    <meta name="twitter:description" content="Professional construction services in Freetown. Contact @sierraleonebuild"/>
+    <meta name="twitter:title" content="Construction & Consulting in Sierra Leone | Konstatines"/>
+    <meta name="twitter:description" content="Construction in Sierra Leone. Consulting, analytics and GIS mapping across Africa."/>
     <meta name="twitter:image" content="https://fortis.sl/hero.jpg"/>
-    
-    <!-- Google tag (gtag.js) -->
+    <meta name="twitter:image:alt" content="Construction and consulting services in Sierra Leone"/>
+
+    <link rel="icon" href="/icon.jpg" type="image/jpeg"/>
+    <link rel="apple-touch-icon" href="/icon.jpg"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QEPY1D8L08"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-QEPY1D8L08', {
-        'anonymize_ip': true,
-        'page_location': window.location.href
-      });
+      gtag('config', 'G-QEPY1D8L08', { 'anonymize_ip': true });
     </script>
-    <!-- End Google Analytics 4 -->
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <style>
         :root {
             --white: #FFFFFF;
-            --beige: #F8F5F0;
-            --gold: #D4AF37;
+            --paper: #FBFAF7;
+            --beige: #F5F1EB;
+            --green: #2E7D3A;
+            --green-deep: #175C22;
+            --green-soft: #E0F0E3;
+            --green-light: #8BD99A;
+            --blue: #0072C6;
+            --blue-deep: #004F8A;
+            --blue-soft: #DBEAF6;
+            --blue-light: #7EC4F0;
             --charcoal: #1A1A1A;
             --gray: #4A4A4A;
+            --topbar-bg: #1A1A1A;
+            --topbar-text: rgba(255,255,255,0.72);
+            --topbar-strong: #FFFFFF;
             --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        html { font-size: 14px; scroll-behavior: smooth; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--white); color: var(--charcoal); line-height: 1.6; }
-
-        .legal-topbar {
-            background: var(--charcoal);
-            color: rgba(255,255,255,0.98);
-            font-size: 0.9rem;
-            text-align: center;
-            padding: 8px 0;
-            letter-spacing: 0.5px;
-            font-weight: 600;
-            line-height: 1.4;
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { transition-duration: 0.01ms !important; }
         }
-        .legal-topbar strong {
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 1rem;
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            background-color: var(--white);
+            color: var(--charcoal);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Sierra Leone flag stripe */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg,
+                var(--green) 0%, var(--green) 33.33%,
+                #FFFFFF 33.33%, #FFFFFF 66.66%,
+                var(--blue) 66.66%, var(--blue) 100%);
+            z-index: 3000;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid var(--green);
+            outline-offset: 3px;
+            border-radius: 2px;
+        }
+
+        /* Skip link */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: var(--green);
+            color: #fff;
+            padding: 10px 16px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 4000;
+        }
+        .skip-link:focus { left: 8px; top: 8px; }
+
+        /* ===== FIXED HEADER ===== */
+        .site-header {
+            position: fixed;
+            top: 4px; left: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         .top-bar {
-            position: fixed; top: 40px; width: 100%;
-            background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px);
-            z-index: 1000; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
-            display: flex; justify-content: center; align-items: center; gap: 30px;
+            background: var(--topbar-bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px max(4%, env(safe-area-inset-right)) 7px max(4%, env(safe-area-inset-left));
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
 
-        .top-bar a {
-            color: var(--gray); font-weight: 600; font-size: 0.8rem;
-            display: flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px;
-            text-decoration: none;
+        .top-bar-left {
+            color: var(--topbar-text);
+            font-size: 0.72rem;
+            display: flex;
+            align-items: center;
+            min-width: 0;
+            flex-shrink: 1;
         }
 
-        .hero {
-            height: 80vh; min-height: 600px;
-            display: flex; align-items: center; justify-content: center; text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('hero.jpg') no-repeat center center;
-            background-size: cover; color: var(--white); padding: 20px;
+        .top-bar-left strong {
+            font-weight: 500;
+            color: var(--topbar-strong);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .hero h1 { font-size: clamp(3rem, 8vw, 5rem); margin-bottom: 10px; text-transform: uppercase; font-weight: 800; letter-spacing: -2px; }
-        .hero h2 { font-size: 1.1rem; font-weight: 400; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 30px; color: var(--gold); }
-        
-        .btn {
-            display: inline-block; padding: 18px 45px; background: var(--white); color: var(--charcoal);
-            border-radius: 50px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem;
-            text-decoration: none; transition: var(--transition);
-        }
-        .btn:hover { background: var(--gold); color: var(--white); transform: translateY(-3px); }
-        
-        .instagram-cta {
+        .accent-dot {
             display: inline-block;
-            margin-top: 1rem;
-            padding: 0.6rem 1.5rem;
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: white;
+            width: 6px; height: 6px;
+            background: var(--green);
+            border-radius: 50%;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        .top-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-shrink: 0;
+        }
+
+        .kb-link {
+            color: var(--green-light);
+            text-decoration: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.68rem;
             font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .kb-link:hover { color: #fff; }
+        .kb-link::after { content: ' →'; }
+
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: var(--topbar-text);
+            user-select: none;
+        }
+
+        .lang-toggle span {
+            cursor: pointer;
+            padding: 1px 5px;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle span.active { color: var(--white); font-weight: 700; background: var(--green); }
+        .lang-toggle span:hover { color: var(--green-light); }
+        .lang-toggle span.active:hover { color: var(--white); }
+
+        .ig-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px; height: 18px;
+            border-radius: 4px;
+            background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+            text-decoration: none;
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+
+        .ig-icon:hover { transform: scale(1.1); }
+        .ig-icon svg { width: 10px; height: 10px; fill: white; }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                        url('hero.jpg') no-repeat center center;
+            background-size: cover;
+            background-color: var(--charcoal);
+            color: var(--white);
+            padding: 120px 8% 80px;
+        }
+
+        .hero-content { max-width: 720px; display: flex; flex-direction: column; gap: 20px; }
+
+        .hero-slogan {
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            text-wrap: balance;
+        }
+
+        .hero-slogan .accent { color: var(--green-light); }
+
+        .hero-sub {
+            font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+            font-weight: 400;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.5;
+            max-width: 560px;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 38px;
+            background: var(--green);
+            color: var(--white);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
             text-decoration: none;
             border-radius: 50px;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
+            width: fit-content;
+            margin-top: 10px;
         }
-        .instagram-cta:hover {
+
+        .hero-cta:hover {
+            background: var(--green-deep);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(220, 39, 67, 0.4);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
         }
 
+        /* ===== SECTIONS ===== */
         section { padding: 100px 8%; }
-        .section-title { text-align: center; font-size: 2rem; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 4px; font-weight: 700; }
 
-        .grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px; max-width: 1400px; margin: 0 auto;
-        }
-
-        .card { position: relative; height: 450px; overflow: hidden; background: #000; }
-        .card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: transform 1.2s ease; }
-        .card:hover img { transform: scale(1.08); }
-
-        .card-overlay {
-            position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: var(--white);
-        }
-        .card-overlay h3 { font-size: 1.2rem; text-transform: uppercase; margin-bottom: 8px; color: var(--gold); }
-
-        #map { height: 500px; width: 100%; max-width: 1200px; margin: 40px auto; filter: grayscale(1); border: 1px solid rgba(0,0,0,0.05); }
-
-        footer {
-            background: var(--charcoal); color: var(--white); padding: 80px 8% 40px;
-            display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;
-        }
-        .footer-right a { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; text-decoration: none; color: white; }
-        .legal-disclosure {
-            opacity: 0.85; font-size: 0.85rem; margin-top: 20px; line-height: 1.5;
-        }
-        .legal-disclosure strong {
-            color: var(--gold);
-            font-size: 1rem;
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
             font-weight: 700;
         }
-        .copyright {
-            opacity: 0.5; font-size: 0.7rem; margin-top: 25px;
+
+        .section-lead {
+            text-align: center;
+            max-width: 660px;
+            margin: 0 auto 60px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.65;
         }
 
+        /* ===== GRID ===== */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            position: relative;
+            height: 430px;
+            overflow: hidden;
+            background: #000;
+            border-radius: 4px;
+        }
+
+        .card img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.82;
+            transition: transform 1.2s ease;
+        }
+
+        .card:hover img { transform: scale(1.06); }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%;
+            padding: 30px 26px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.93));
+            color: var(--white);
+        }
+
+        .card-geo {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+
+        .card[data-region="africa"] .card-geo {
+            background: var(--blue);
+            color: #fff;
+        }
+        .card[data-region="sl"] .card-geo {
+            background: var(--green);
+            color: #fff;
+        }
+
+        .card-overlay h3 {
+            font-size: 1.02rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: var(--white);
+            line-height: 1.25;
+        }
+
+        .card-overlay p { font-size: 0.84rem; opacity: 0.86; line-height: 1.55; }
+
+        /* ===== KNOWLEDGE BASE STRIP ===== */
+        .kb-strip {
+            background: linear-gradient(135deg, var(--green-soft) 0%, var(--blue-soft) 100%);
+            padding: 72px 8%;
+            position: relative;
+            overflow: hidden;
+        }
+        .kb-strip::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg,
+                var(--green) 0%, var(--green) 33.33%,
+                #FFFFFF 33.33%, #FFFFFF 66.66%,
+                var(--blue) 66.66%, var(--blue) 100%);
+        }
+        .kb-strip-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .kb-strip-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--green-deep);
+            margin-bottom: 20px;
+        }
+        .kb-strip-label::before {
+            content: '';
+            width: 24px; height: 1px;
+            background: var(--green-deep);
+        }
+        .kb-strip h2 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            color: var(--charcoal);
+        }
+        .kb-strip-desc {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--gray);
+            max-width: 560px;
+            margin: 0 auto 32px;
+        }
+        .kb-strip-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 36px;
+            background: var(--charcoal);
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.82rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+        .kb-strip-cta:hover {
+            background: var(--green);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(46,125,58,0.25);
+        }
+
+        /* ===== MAP ===== */
+        #map {
+            height: 450px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto;
+            border: 1px solid rgba(0,0,0,0.06);
+            background: var(--beige);
+        }
+
+        /* ===== FOOTER (single row) ===== */
+        footer {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 14px max(4%, env(safe-area-inset-right)) 14px max(4%, env(safe-area-inset-left));
+            font-size: 0.72rem;
+        }
+
+        .footer-bar {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-copy { color: rgba(255,255,255,0.55); font-size: 0.72rem; letter-spacing: 0.2px; }
+
+        .footer-links { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.72);
+            text-decoration: none;
+            font-size: 0.72rem;
+            font-weight: 400;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--green-light); }
+        .footer-links a.kb-footer {
+            color: var(--green-light);
+            font-weight: 500;
+        }
+        .footer-links .sep { color: rgba(255,255,255,0.2); }
+
+        /* ===== MODALS ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active { display: flex; }
+
+        .modal {
+            background: var(--white);
+            max-width: 680px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 48px 44px;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .modal h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .modal .modal-meta {
+            font-size: 0.72rem;
+            color: var(--gray);
+            opacity: 0.75;
+            margin-bottom: 28px;
+            letter-spacing: 0.3px;
+        }
+
+        .modal h3 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin: 24px 0 8px;
+            color: var(--green-deep);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modal p, .modal li {
+            font-size: 0.82rem;
+            line-height: 1.7;
+            color: var(--gray);
+            margin-bottom: 10px;
+        }
+
+        .modal ul { padding-left: 20px; margin-bottom: 10px; }
+        .modal li { margin-bottom: 5px; }
+        .modal strong { color: var(--charcoal); font-weight: 600; }
+
+        .modal-close {
+            position: absolute;
+            top: 14px; right: 18px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+            line-height: 1;
+            padding: 6px;
+        }
+
+        .modal-close:hover { color: var(--charcoal); }
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .footer-right, .footer-left { text-align: center; width: 100%; }
-            .footer-right a { justify-content: center; }
-            .legal-topbar { font-size: 0.75rem; padding: 6px 0; }
-            .legal-topbar strong { font-size: 0.85rem; }
-            .top-bar { top: 34px; gap: 20px; }
+            .top-bar { padding: 6px max(4%, env(safe-area-inset-right)) 6px max(4%, env(safe-area-inset-left)); gap: 8px; }
+            .top-bar-left { font-size: 0.6rem; }
+            .top-bar-left strong { max-width: 40vw; }
+            .top-bar-right { gap: 10px; }
+            .kb-link { font-size: 0.6rem; letter-spacing: 1px; }
+            .lang-toggle { font-size: 0.6rem; }
+
+            .hero { min-height: 72vh; padding: 100px 6% 60px; }
+            .hero-slogan { font-size: clamp(1.8rem, 7vw, 2.8rem); }
+
+            section { padding: 70px 6%; }
+            .section-title { font-size: 1.5rem; letter-spacing: 3px; }
+
+            .card { height: 380px; }
+            .card-overlay { padding: 24px 22px; }
+            .card-overlay h3 { font-size: 0.98rem; }
+            .card-overlay p { font-size: 0.82rem; }
+
+            .kb-strip { padding: 56px 6%; }
+            .kb-strip h2 { font-size: 1.4rem; }
+            .kb-strip-desc { font-size: 0.94rem; }
+            .kb-strip-cta { padding: 13px 28px; font-size: 0.76rem; }
+
+            .footer-bar { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .footer-links { gap: 14px; }
+
+            .modal { padding: 36px 24px; }
+        }
+
+        @media (max-width: 420px) {
+            .top-bar-left strong { font-size: 0.6rem; max-width: 34vw; }
+            .lang-toggle { font-size: 0.55rem; }
+            .ig-icon { display: none; }
+            .footer-copy, .footer-links a { font-size: 0.65rem; }
+            .card { height: 340px; }
+        }
+
+        /* Touch devices: no sticky hover */
+        @media (hover: none) {
+            .card:hover img { transform: none; }
+            .hero-cta:hover,
+            .kb-strip-cta:hover { transform: none; box-shadow: none; }
         }
     </style>
 </head>
 <body>
 
-    <div class="legal-topbar">
-        <strong>Fortis Engineer Contractors Limited</strong> | Freetown, Sierra Leone
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- ===== FIXED HEADER ===== -->
+    <div class="site-header">
+        <nav class="top-bar" role="navigation" aria-label="Main navigation">
+            <div class="top-bar-left">
+                <span class="accent-dot" aria-hidden="true"></span>
+                <strong>Konstatines Consulting Services Limited</strong>
+            </div>
+            <div class="top-bar-right">
+                <a href="/knowledge/sierra-leone" class="kb-link">Knowledge Base</a>
+                <div class="lang-toggle" role="group" aria-label="Language selector">
+                    <span class="active" data-lang="en" aria-label="English">EN</span>
+                    <span data-lang="kri" aria-label="Krio">KRI</span>
+                </div>
+                <a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener noreferrer" class="ig-icon" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+            </div>
+        </nav>
     </div>
 
-    <nav class="top-bar">
-        <a href="mailto:kt@krent.sl"><span>📧</span> kt@krent.sl</a>
-        <a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener">Instagram</a>
-    </nav>
-
-    <header class="hero">
+    <!-- ===== HERO ===== -->
+    <header class="hero" role="banner">
         <div class="hero-content">
-            <h1>Fortis Engineering</h1>
-            <h2>Construction Services in Sierra Leone</h2>
-            <a href="mailto:kt@krent.sl" class="btn">Start Your Vision</a>
-            <br>
-            <a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener" class="instagram-cta">
-                📸 Follow @sierraleonebuild
+            <h1 class="hero-slogan">
+                Building <span class="accent">Sierra Leone's</span> Future
+            </h1>
+            <p class="hero-sub">
+                Construction, land and equipment services across Sierra Leone — and consulting, analytics and mapping delivered remotely to clients throughout Africa.
+            </p>
+            <a href="mailto:kt@krent.sl?subject=Project%20Inquiry" class="hero-cta">
+                <span aria-hidden="true">✉</span> Send an Email
             </a>
         </div>
     </header>
 
-    <section class="works">
-        <h2 class="section-title">Field Operations</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="land.jpg" alt="Land acquisition and site selection services in Sierra Leone">
-                <div class="card-overlay">
-                    <h3>Land Selection</h3>
-                    <p>Due Diligence & Site Acquisition</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="wood.jpg" alt="Premium material selection for construction projects">
-                <div class="card-overlay">
-                    <h3>Selection of Materials</h3>
-                    <p>Premium Quality Procurement</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="earthmoving.jpg" alt="Heavy earthmoving and excavation services Freetown">
-                <div class="card-overlay">
-                    <h3>Earthmoving</h3>
-                    <p>Excavation & Site Preparation</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="concrete.jpg" alt="Concrete reinforcement and structural engineering Sierra Leone">
-                <div class="card-overlay">
-                    <h3>Concrete & Reinforcement</h3>
-                    <p>Structural Engineering Excellence</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="b2.jpg" alt="Technical equipment advisory and machinery consulting">
-                <div class="card-overlay">
-                    <h3>Selection of Equipment</h3>
-                    <p>Technical Machinery Consulting</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="exc2.jpg" alt="Heavy machinery rental solutions for construction projects">
-                <div class="card-overlay">
-                    <h3>Rental of Equipment</h3>
-                    <p>Heavy Machinery Fleet Solutions</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main id="main-content">
 
-    <div id="map"></div>
-
-    <footer>
-        <div class="footer-left">
-            <h3>Fortis Engineering 🇸🇱</h3>
-            <p>Freetown, Sierra Leone</p>
-            <p class="legal-disclosure">
-                Fortis Engineering is a trading name of<br>
-                <strong>Fortis Engineer Contractors Limited</strong>,<br>
-                Freetown, Sierra Leone.
+        <!-- ===== SERVICES ===== -->
+        <section class="works" id="works" aria-labelledby="services-heading">
+            <h2 class="section-title" id="services-heading">Services</h2>
+            <p class="section-lead">
+                Consulting and analytics delivered remotely across Africa. Construction, land and equipment operations on the ground in Sierra Leone.
             </p>
+
+            <div class="grid">
+
+                <div class="card" data-region="africa">
+                    <img src="data.jpg" alt="Data analysis and visualisation services across Africa" loading="lazy" decoding="async" width="400" height="430">
+                    <div class="card-overlay">
+                        <span class="card-geo">Across Africa</span>
+                        <h3>Data Analysis & Visualisation</h3>
+                        <p>Turning raw project, market and geospatial datasets into clear, decision-ready insight — dashboards, charts and summary reporting.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-region="africa">
+                    <img src="gis.jpg" alt="Cartography and GIS mapping services across Africa" loading="lazy" decoding="async" width="400" height="430">
+                    <div class="card-overlay">
+                        <span class="card-geo">Across Africa</span>
+                        <h3>Cartography & GIS Mapping</h3>
+                        <p>Custom maps, boundary verification, topographic visualisation and location intelligence built from verified sources.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-region="africa">
+                    <img src="realestate.jpg" alt="Real estate analytics and market intelligence across Africa" loading="lazy" decoding="async" width="400" height="430">
+                    <div class="card-overlay">
+                        <span class="card-geo">Across Africa</span>
+                        <h3>Real Estate Analytics</h3>
+                        <p>Price trends, comparable analysis, rental yield modelling and neighbourhood-level market intelligence for investors and developers.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-region="sl">
+                    <img src="land.jpg" alt="Land acquisition and site selection services in Sierra Leone" loading="lazy" decoding="async" width="400" height="430">
+                    <div class="card-overlay">
+                        <span class="card-geo">Sierra Leone</span>
+                        <h3>Land Selection</h3>
+                        <p>Independent site verification, title due diligence and structured acquisition support across Sierra Leone.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-region="sl">
+                    <img src="wood.jpg" alt="Premium material selection for construction projects" loading="lazy" decoding="async" width="400" height="430">
+                    <div class="card-overlay">
+                        <span class="card-geo">Sierra Leone</span>
+                        <h3>Selection of Materials</h3>
+                        <p>Sourcing, specification and procurement of structural, finishing and specialty materials from vetted suppliers.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-region="sl">
+                    <img src="earthmoving.jpg" alt="Heavy earthmoving and excavation services Freetown" loading="lazy" decoding="async" width="400" height="430">
+                    <div class="card-overlay">
+                        <span class="card-geo">Sierra Leone</span>
+                        <h3>Earthmoving</h3>
+                        <p>Bulk excavation, grading, trenching and full site preparation using modern heavy plant and experienced operators.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-region="sl">
+                    <img src="concrete.jpg" alt="Concrete reinforcement and structural engineering Sierra Leone" loading="lazy" decoding="async" width="400" height="430">
+                    <div class="card-overlay">
+                        <span class="card-geo">Sierra Leone</span>
+                        <h3>Concrete & Reinforcement</h3>
+                        <p>Reinforced concrete structures, foundations, slabs and quality-controlled pours with documented mix design.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-region="sl">
+                    <img src="b2.jpg" alt="Technical equipment advisory and machinery consulting" loading="lazy" decoding="async" width="400" height="430">
+                    <div class="card-overlay">
+                        <span class="card-geo">Sierra Leone</span>
+                        <h3>Selection of Equipment</h3>
+                        <p>Impartial specification and sourcing of plant and machinery matched to project scope, terrain and budget.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-region="sl">
+                    <img src="exc2.jpg" alt="Heavy machinery rental solutions for construction projects" loading="lazy" decoding="async" width="400" height="430">
+                    <div class="card-overlay">
+                        <span class="card-geo">Sierra Leone</span>
+                        <h3>Rental of Equipment</h3>
+                        <p>Flexible short- and long-term hire of excavators, loaders, mixers and support plant, with operators on request.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== KNOWLEDGE BASE STRIP ===== -->
+        <section class="kb-strip" aria-labelledby="kb-heading">
+            <div class="kb-strip-inner">
+                <p class="kb-strip-label">Knowledge Base</p>
+                <h2 id="kb-heading">A reference on Sierra Leone</h2>
+                <p class="kb-strip-desc">
+                    Fourteen articles on the land, climate, people, economy and the laws that govern ownership and investment — written for buyers, builders and investors.
+                </p>
+                <a href="/knowledge/sierra-leone" class="kb-strip-cta">
+                    Open the Knowledge Base →
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== MAP ===== -->
+        <div id="map" aria-label="Map of Freetown, Sierra Leone"></div>
+
+    </main>
+
+    <!-- ===== FOOTER (single row) ===== -->
+    <footer role="contentinfo">
+        <div class="footer-bar">
+            <span class="footer-copy">
+                &copy; <span id="year"></span> Konstatines Consulting Services Limited
+            </span>
+            <div class="footer-links">
+                <a href="/knowledge/sierra-leone" class="kb-footer">Knowledge Base</a>
+                <span class="sep">·</span>
+                <a href="mailto:kt@krent.sl"><span aria-hidden="true">✉</span> kt@krent.sl</a>
+                <span class="sep">·</span>
+                <a href="#" id="terms-link">Terms of Use</a>
+                <span class="sep">·</span>
+                <a href="#" id="privacy-link">Privacy Policy</a>
+            </div>
         </div>
-        <div class="footer-right">
-            <a href="mailto:kt@krent.sl">📧 kt@krent.sl</a>
-            <a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener" style="color:var(--gold); font-weight:700;">
-                📷 Instagram: @sierraleonebuild
-            </a>
-        </div>
-        <p class="copyright" style="width:100%; text-align:center; margin-top:30px; opacity:0.5; font-size:0.7rem;">
-            &copy; 2026 Fortis Engineer Contractors Limited. All rights reserved.
-        </p>
     </footer>
 
+    <!-- ===== TERMS MODAL ===== -->
+    <div class="modal-overlay" id="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+        <div class="modal">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <h2 id="terms-title">Terms of Use</h2>
+            <p class="modal-meta">Konstatines Consulting Services Limited &middot; Freetown, Sierra Leone</p>
+
+            <h3>1. Acceptance of Terms</h3>
+            <p>By accessing, browsing or using this website (the &ldquo;Site&rdquo;), you confirm that you have read, understood and agree to be bound by these Terms of Use. If you do not accept them in full, you must discontinue use of the Site immediately.</p>
+
+            <h3>2. Definitions</h3>
+            <p><strong>&ldquo;Company&rdquo;</strong>, &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo; refers to Konstatines Consulting Services Limited. <strong>&ldquo;User&rdquo;</strong> or &ldquo;you&rdquo; refers to any person accessing the Site. <strong>&ldquo;Services&rdquo;</strong> refers to consulting, analytics, mapping and construction-related services described on the Site.</p>
+
+            <h3>3. Scope of Services</h3>
+            <p>The Site provides general information about our Services. Content does not constitute a binding offer, professional advice, or a guarantee of availability. Formal engagement occurs only under a separately executed written agreement.</p>
+
+            <h3>4. Permitted Use</h3>
+            <p>You agree to use the Site lawfully and not to: (a) interfere with its operation or security; (b) scrape, harvest or systematically extract content; (c) attempt unauthorised access to any part of the Site or its infrastructure; (d) upload malicious code; or (e) use the Site in a manner that infringes the rights of any third party.</p>
+
+            <h3>5. Intellectual Property</h3>
+            <p>All content, layout, graphics, maps, analytical frameworks, text and code on the Site are the property of the Company or its licensors and are protected by applicable copyright, trademark and database rights. No content may be reproduced, distributed or adapted without prior written consent.</p>
+
+            <h3>6. Accuracy and Disclaimers</h3>
+            <p>Information is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;. While we take reasonable care to keep content current, we make no representation or warranty as to accuracy, completeness, reliability or fitness for a particular purpose. Any reliance on Site content is at your own risk.</p>
+
+            <h3>7. Third-Party Content and Links</h3>
+            <p>The Site may reference or link to third-party platforms (for example, Instagram or mapping services). We are not responsible for the content, policies or availability of those platforms, and any interaction is solely between you and the third party.</p>
+
+            <h3>8. Limitation of Liability</h3>
+            <p>To the fullest extent permitted by law, the Company shall not be liable for any direct, indirect, incidental, consequential, special or punitive loss or damage arising from or in connection with your use of, or inability to use, the Site — including loss of profits, data, business or goodwill.</p>
+
+            <h3>9. Indemnification</h3>
+            <p>You agree to indemnify and hold harmless the Company, its directors, employees and agents from any claim, liability, loss or expense (including legal fees) arising from your misuse of the Site or breach of these Terms.</p>
+
+            <h3>10. Confidentiality</h3>
+            <p>Any information exchanged through the Site does not create a confidential relationship. Confidential treatment of project data is only established through a signed non-disclosure agreement.</p>
+
+            <h3>11. Changes and Termination</h3>
+            <p>We reserve the right to modify, suspend or discontinue the Site, or any portion of it, at any time and without notice. These Terms may be revised periodically; the version published at the time of access governs your use.</p>
+
+            <h3>12. Governing Law and Jurisdiction</h3>
+            <p>These Terms are governed by the laws of the Republic of Sierra Leone. Any dispute arising shall be subject to the exclusive jurisdiction of the courts of Sierra Leone, without prejudice to any mandatory consumer protections available in your country of residence.</p>
+
+            <h3>13. Contact</h3>
+            <p>Questions regarding these Terms may be directed to <strong>kt@krent.sl</strong>.</p>
+        </div>
+    </div>
+
+    <!-- ===== PRIVACY MODAL ===== -->
+    <div class="modal-overlay" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+        <div class="modal">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <h2 id="privacy-title">Privacy Policy</h2>
+            <p class="modal-meta">Strict compliance with the GDPR (EU 2016/679) and applicable data protection laws</p>
+
+            <h3>1. Introduction</h3>
+            <p>We are committed to protecting your personal data and processing it lawfully, fairly and transparently. This policy explains what we collect, why we collect it, how long we keep it and the rights you hold over it.</p>
+
+            <h3>2. Data Controller</h3>
+            <p>The data controller is <strong>Konstatines Consulting Services Limited</strong>, Freetown, Sierra Leone. Contact: <strong>kt@krent.sl</strong>.</p>
+
+            <h3>3. Categories of Data We Process</h3>
+            <ul>
+                <li><strong>Contact data</strong> — name and email address you provide when writing to us.</li>
+                <li><strong>Correspondence data</strong> — the content of your message and any attachments.</li>
+                <li><strong>Technical data</strong> — anonymised IP address, browser type and pages viewed, collected via privacy-respecting analytics.</li>
+            </ul>
+            <p>We do not collect special-category data (health, ethnicity, religion, political views, biometrics) and do not knowingly process data of children under 16.</p>
+
+            <h3>4. Legal Basis for Processing</h3>
+            <p>Under Article 6 of the GDPR, we rely on:</p>
+            <ul>
+                <li><strong>Consent</strong> (Art. 6(1)(a)) — where you voluntarily contact us.</li>
+                <li><strong>Legitimate interest</strong> (Art. 6(1)(f)) — for basic website security and anonymised traffic measurement.</li>
+                <li><strong>Contract</strong> (Art. 6(1)(b)) — where processing is necessary to deliver services you have engaged us for.</li>
+            </ul>
+
+            <h3>5. Purposes of Processing</h3>
+            <p>We use your data solely to: respond to enquiries; prepare proposals; deliver agreed services; maintain website security and integrity; and meet legal or accounting obligations. We never use your data for automated decision-making or profiling.</p>
+
+            <h3>6. Retention</h3>
+            <p>Enquiry correspondence is retained for up to <strong>24 months</strong> after last contact, unless a contract is established, in which case records are held for the statutory period required by Sierra Leone law. Anonymised analytics data is aggregated and cannot be linked back to you.</p>
+
+            <h3>7. Sharing and Disclosure</h3>
+            <p>We do <strong>not sell, rent or trade</strong> your data. Limited disclosure may occur to: (a) service providers strictly necessary to operate the Site (hosting, email, anonymised analytics); (b) professional advisers bound by confidentiality; (c) authorities where legally compelled. All processors act under written data-processing agreements.</p>
+
+            <h3>8. International Transfers</h3>
+            <p>Where data is transferred outside the EEA (for example to hosting or email providers), we ensure appropriate safeguards are in place, including European Commission Standard Contractual Clauses or equivalent mechanisms.</p>
+
+            <h3>9. Your Rights</h3>
+            <p>Under the GDPR you have the right to:</p>
+            <ul>
+                <li>Access the personal data we hold about you;</li>
+                <li>Request rectification of inaccurate data;</li>
+                <li>Request erasure (&ldquo;right to be forgotten&rdquo;);</li>
+                <li>Restrict or object to processing;</li>
+                <li>Data portability;</li>
+                <li>Withdraw consent at any time;</li>
+                <li>Lodge a complaint with your national supervisory authority.</li>
+            </ul>
+            <p>To exercise any right, email <strong>kt@krent.sl</strong>. We respond within 30 days.</p>
+
+            <h3>10. Cookies and Analytics</h3>
+            <p>The Site does not use advertising or tracking cookies. We use Google Analytics 4 with IP anonymisation enabled, which aggregates traffic data and does not identify individual visitors. You may block analytics scripts in your browser at any time with no loss of site functionality.</p>
+
+            <h3>11. Security</h3>
+            <p>We apply appropriate technical and organisational measures — including TLS encryption in transit, access controls and least-privilege principles — to protect your data against unauthorised access, alteration or loss.</p>
+
+            <h3>12. Children</h3>
+            <p>The Site is not directed at children under 16, and we do not knowingly collect their data. If you believe a child has provided data, contact us and we will delete it promptly.</p>
+
+            <h3>13. Changes to This Policy</h3>
+            <p>We may update this policy to reflect legal or operational changes. The current version is always available on this Site, and material changes will be highlighted at the top of this modal.</p>
+
+            <h3>14. Contact and Complaints</h3>
+            <p>For any privacy matter, contact <strong>kt@krent.sl</strong>. If you are unsatisfied with our response, you have the right to complain to the data protection authority in your country of residence.</p>
+        </div>
+    </div>
+
+    <!-- ===== JSON-LD SCHEMA ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Fortis Engineering",
-      "legalName": "Fortis Engineer Contractors Limited",
-      "image": "https://fortis.sl/hero.jpg",
-      "email": "kt@krent.sl",
-      "url": "https://fortis.sl",
-      "sameAs": [
-        "https://instagram.com/sierraleonebuild"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Freetown",
-        "addressCountry": "SL"
-      },
-      "areaServed": "SL",
-      "makesOffer": "https://fortis.sl/#works",
-      "priceRange": "$$$",
-      "availableLanguage": ["English"]
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://fortis.sl/#org",
+          "name": "Konstatines Consulting Services Limited",
+          "legalName": "Konstatines Consulting Services Limited",
+          "image": "https://fortis.sl/hero.jpg",
+          "logo": "https://fortis.sl/icon.jpg",
+          "email": "kt@krent.sl",
+          "url": "https://fortis.sl",
+          "sameAs": ["https://instagram.com/sierraleonebuild"],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Freetown",
+            "addressCountry": "SL"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://fortis.sl/#website",
+          "url": "https://fortis.sl/",
+          "name": "Konstatines Consulting",
+          "publisher": { "@id": "https://fortis.sl/#org" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://fortis.sl/#business",
+          "name": "Konstatines Consulting Services Limited",
+          "parentOrganization": { "@id": "https://fortis.sl/#org" },
+          "image": "https://fortis.sl/hero.jpg",
+          "email": "kt@krent.sl",
+          "url": "https://fortis.sl",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Freetown",
+            "addressCountry": "SL"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": 8.48, "longitude": -13.23 },
+          "knowsAbout": [
+            "Data analytics",
+            "GIS mapping",
+            "Cartography",
+            "Real estate analytics",
+            "Construction management"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Consulting & Construction Services",
+            "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Data Analysis & Visualisation", "areaServed": {"@type": "Place", "name": "Africa"}}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cartography & GIS Mapping", "areaServed": {"@type": "Place", "name": "Africa"}}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Real Estate Analytics", "areaServed": {"@type": "Place", "name": "Africa"}}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Land Selection", "areaServed": {"@type": "Country", "name": "Sierra Leone"}}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Selection of Materials", "areaServed": {"@type": "Country", "name": "Sierra Leone"}}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Earthmoving", "areaServed": {"@type": "Country", "name": "Sierra Leone"}}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete & Reinforcement", "areaServed": {"@type": "Country", "name": "Sierra Leone"}}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Selection of Equipment", "areaServed": {"@type": "Country", "name": "Sierra Leone"}}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rental of Equipment", "areaServed": {"@type": "Country", "name": "Sierra Leone"}}}
+            ]
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "Sierra Leone" },
+            { "@type": "Place", "name": "Africa" }
+          ],
+          "priceRange": "$$$",
+          "availableLanguage": ["English", "Krio"]
+        }
+      ]
     }
     </script>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <script>
-        const map = L.map('map', { scrollWheelZoom: false, attributionControl: false }).setView([8.48, -13.23], 10);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(map);
-        const goldIcon = L.divIcon({
-            className: 'custom-div-icon',
-            html: "<div style='background-color:#D4AF37; width:12px; height:12px; border-radius:50%; border:2px solid white;'></div>",
-            iconSize: [12, 12], iconAnchor: [6, 6]
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setupModal(linkId, modalId) {
+            const link = document.getElementById(linkId);
+            const modal = document.getElementById(modalId);
+            const closeBtn = modal.querySelector('.modal-close');
+
+            link.addEventListener('click', function(e) { e.preventDefault(); modal.classList.add('active'); });
+            closeBtn.addEventListener('click', function() { modal.classList.remove('active'); });
+            modal.addEventListener('click', function(e) { if (e.target === modal) modal.classList.remove('active'); });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) modal.classList.remove('active');
+            });
+        }
+        setupModal('terms-link', 'terms-modal');
+        setupModal('privacy-link', 'privacy-modal');
+
+        const langSpans = document.querySelectorAll('.lang-toggle span');
+        langSpans.forEach(function(span) {
+            span.addEventListener('click', function() {
+                langSpans.forEach(function(s) { s.classList.remove('active'); });
+                span.classList.add('active');
+            });
         });
-        L.marker([8.48, -13.23], {icon: goldIcon}).addTo(map);
+
+        (function() {
+            var mapInitialized = false;
+            var mapContainer = document.getElementById('map');
+
+            function initMap() {
+                if (mapInitialized || typeof L === 'undefined') return;
+                mapInitialized = true;
+
+                var map = L.map('map', {
+                    scrollWheelZoom: false,
+                    center: [8.48, -13.23],
+                    zoom: 11,
+                    attributionControl: true
+                });
+
+                L.tileLayer(
+                    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+                    { maxZoom: 19, crossOrigin: true, attribution: 'Tiles &copy; Esri' }
+                ).addTo(map);
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) { initMap(); observer.unobserve(entry.target); }
+                    });
+                }, { rootMargin: '200px' });
+                observer.observe(mapContainer);
+            } else { setTimeout(initMap, 500); }
+        })();
     </script>
+
 </body>
 </html>
