@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FBFAF7">
+<title>Sierra Leone — Country Profile</title>
+<meta name="description" content="A reference on Sierra Leone: geography, climate, people, economy and the laws that govern land and investment.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fortis.sl/knowledge/sierra-leone">
+<link rel="icon" href="/icon.jpg" type="image/jpeg">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sierra Leone — Country Profile">
+<meta property="og:description" content="A reference on the land, climate, people, economy and the laws that govern ownership and investment.">
+<meta property="og:url" content="https://fortis.sl/knowledge/sierra-leone">
+<meta property="og:image" content="https://fortis.sl/hero.jpg">
+<meta property="og:image:alt" content="Sierra Leone country reference">
+<meta property="og:locale" content="en_SL">
+<meta property="og:site_name" content="Konstatines Consulting">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sierra Leone — Country Profile">
+<meta name="twitter:description" content="Land, climate, people, economy and the laws that govern ownership and investment.">
+<meta name="twitter:image" content="https://fortis.sl/hero.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&family=Work+Sans:wght@500;600&family=Manrope:wght@500;600&family=IBM+Plex+Sans:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #FBFAF7;
+  --paper-deep: #EFECE5;
+  --ink: #1C1C1C;
+  --ink-soft: #3A3A3A;
+  --muted: #7A7570;
+  --faint: #A8A29A;
+  --rule: #D8D2C7;
+  --rule-strong: #1C1C1C;
+
+  --green: #2E7D3A;
+  --green-deep: #175C22;
+  --green-soft: #E0F0E3;
+  --green-tint: #F0F8F2;
+  --blue: #0072C6;
+  --blue-deep: #004F8A;
+  --blue-soft: #DBEAF6;
+  --blue-tint: #EEF5FB;
+
+  --sans: 'Inter', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', 'SF Mono', monospace;
+  --display-site: 'Space Grotesk', system-ui, sans-serif;
+  --display-geo: 'Space Grotesk', system-ui, sans-serif;
+  --display-cli: 'Work Sans', system-ui, sans-serif;
+  --display-peo: 'Manrope', system-ui, sans-serif;
+  --display-eco: 'IBM Plex Sans', system-ui, sans-serif;
+  --display: var(--display-site);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  counter-reset: art;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg,
+    var(--green) 0%, var(--green) 33.33%,
+    #FFFFFF 33.33%, #FFFFFF 66.66%,
+    var(--blue) 66.66%, var(--blue) 100%);
+  z-index: 2000;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+}
+
+a { color: inherit; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+/* ============ TOP ============ */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.8rem;
+  background: rgba(251,250,247,0.9);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 4px;
+  z-index: 100;
+  gap: 16px;
+}
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.brand {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  font-family: var(--display-site);
+  font-size: 0.88rem;
+}
+.lang-toggle {
+  display: inline-flex;
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 2px;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  user-select: none;
+}
+.lang-toggle button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  color: var(--muted);
+  padding: 4px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+.lang-toggle button.active {
+  background: var(--ink);
+  color: #fff;
+}
+.lang-toggle button:hover:not(.active) {
+  color: var(--green);
+}
+.back { color: var(--muted); text-decoration: none; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.02em; }
+.back:hover { color: var(--green); }
+
+/* ============ MAIN ============ */
+main { max-width: 820px; margin: 0 auto; padding: 88px 32px 96px; }
+
+/* ============ HERO ============ */
+.hero { margin-bottom: 64px; }
+.eyebrow {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--mono);
+  font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--green); margin-bottom: 28px;
+}
+.eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--green); }
+
+.hero-title-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+.contour-mark {
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  color: var(--green);
+}
+.contour-mark svg { display: block; width: 100%; height: 100%; }
+.contour-mark .c-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+  stroke-linecap: round;
+  opacity: 0.55;
+}
+.contour-mark .c-line.inner { opacity: 0.85; }
+.contour-mark .c-dot { fill: var(--blue); }
+
+h1 {
+  font-family: var(--display-site);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.hero-sub {
+  font-family: var(--sans);
+  font-size: 1.16rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 580px;
+  margin-bottom: 36px;
+}
+
+.season {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+.season svg { flex-shrink: 0; }
+.season .season-data { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.season .season-data span { white-space: nowrap; }
+.season .season-data .val { color: var(--ink); font-weight: 500; }
+.season .season-data .dot { color: var(--faint); }
+
+/* ============ DATA RIBBON ============ */
+.ribbon {
+  margin: 0 -32px 72px;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--rule);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.ribbon-inner { display: flex; gap: 0; min-width: max-content; }
+.ribbon-item {
+  flex: 1;
+  min-width: 140px;
+  padding: 24px 20px 20px;
+  border-right: 1px solid var(--rule);
+  position: relative;
+}
+.ribbon-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 28px;
+  height: 2px;
+  background: var(--green);
+}
+.ribbon-item:nth-child(3)::before { background: var(--blue); }
+.ribbon-item:nth-child(4)::before { background: var(--blue); }
+.ribbon-item:first-child { padding-left: 0; }
+.ribbon-item:last-child { border-right: none; }
+.ribbon-item .num {
+  display: block;
+  font-family: var(--display-site);
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.ribbon-item .num .u { font-size: 0.95rem; color: var(--muted); font-weight: 400; margin-left: 2px; font-family: var(--sans); }
+.ribbon-item .lbl {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* ============ PART ============ */
+.part { margin-bottom: 56px; }
+.part-1-1 { --display: var(--display-geo); --part-accent: var(--blue); }
+.part-1-2 { --display: var(--display-cli); --part-accent: var(--green); }
+.part-1-3 { --display: var(--display-peo); --part-accent: var(--green-deep); }
+.part-1-4 { --display: var(--display-eco); --part-accent: var(--ink); }
+
+.part-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--rule-strong);
+}
+.part-num {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: var(--part-accent, var(--green));
+  padding: 3px 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: center;
+}
+.part-head h2 {
+  font-family: var(--display);
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  flex: 1;
+}
+.part-head .part-meta {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--faint);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+/* ============ ARTICLES ============ */
+.articles { list-style: none; }
+.articles li { border-bottom: 1px solid var(--rule); }
+.articles li.flagged { background: linear-gradient(90deg, var(--green-soft) 0%, transparent 60%); }
+.articles a {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 0 16px;
+  align-items: start;
+  padding: 18px 0;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.articles a::before {
+  counter-increment: art;
+  content: counter(art, decimal-leading-zero);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--faint);
+  line-height: 1.6;
+  padding-top: 2px;
+}
+.article-title {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+  transition: color 0.15s ease;
+}
+.articles a .chips {
+  display: flex;
+  gap: 6px;
+  padding-top: 3px;
+  flex-wrap: wrap;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 2px;
+  line-height: 1.5;
+}
+.chip .sym { font-size: 0.7rem; }
+.chip.law { background: var(--blue-soft); color: var(--blue-deep); }
+.chip.data { background: var(--paper-deep); color: var(--muted); }
+.chip.site { background: var(--green-soft); color: var(--green-deep); }
+.chip.start { background: var(--green); color: #fff; }
+.articles a:hover { background: rgba(46,125,58,0.05); }
+.articles a:hover .article-title { color: var(--green); }
+.articles a:hover::before { color: var(--green); }
+
+/* ============ CLOSING ============ */
+.closing {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 2px solid var(--rule-strong);
+}
+.closing .label {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 18px;
+}
+.closing p {
+  font-family: var(--display-site);
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 24px;
+  max-width: 540px;
+}
+.closing a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--blue);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--blue);
+  padding-bottom: 2px;
+}
+.closing a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* ============ FOOTER ============ */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 24px 32px 28px;
+  font-size: 0.76rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  letter-spacing: 0.01em;
+}
+.footer-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--green); }
+footer .sep { margin: 0 8px; color: var(--faint); }
+
+/* ============ ARTICLE VIEW ============ */
+.article-view {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--paper);
+  z-index: 1000;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.article-view.open { display: block; }
+.article-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  position: sticky;
+  top: 0;
+  background: rgba(251,250,247,0.95);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+.article-back {
+  color: var(--muted); cursor: pointer;
+  background: none; border: none;
+  font-family: inherit; font-size: inherit;
+  padding: 0; letter-spacing: 0.02em;
+}
+.article-back:hover { color: var(--green); }
+.article-part-label { color: var(--faint); letter-spacing: 0.06em; text-transform: uppercase; }
+
+.article-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 32px 104px;
+  position: relative;
+}
+.article-content::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 32px;
+  width: 48px;
+  height: 3px;
+  background: var(--green);
+}
+.article-content[data-part="geo"]::before { background: var(--blue); }
+.article-content[data-part="cli"]::before { background: var(--green); }
+.article-content[data-part="peo"]::before { background: var(--green-deep); }
+.article-content[data-part="eco"]::before { background: var(--ink); }
+
+.article-content[data-part="geo"] { --display: var(--display-geo); --part-accent: var(--blue); }
+.article-content[data-part="cli"] { --display: var(--display-cli); --part-accent: var(--green); }
+.article-content[data-part="peo"] { --display: var(--display-peo); --part-accent: var(--green-deep); }
+.article-content[data-part="eco"] { --display: var(--display-eco); --part-accent: var(--ink); }
+
+.article-content .kicker {
+  font-family: var(--mono);
+  font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--part-accent, var(--green)); margin: 40px 0 24px;
+  display: flex; align-items: center; gap: 10px;
+}
+.article-content .kicker::before { content: ''; width: 24px; height: 1px; background: var(--part-accent, var(--green)); }
+
+.article-content h1 {
+  font-family: var(--display);
+  font-size: clamp(2.1rem, 5.2vw, 3rem);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  margin-bottom: 16px;
+}
+.article-meta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--faint);
+  letter-spacing: 0.02em;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 36px;
+}
+
+.key-figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  padding: 0 0 24px;
+  margin-bottom: 20px;
+}
+.kf {
+  display: block;
+  padding: 16px 16px 14px;
+  border-radius: 3px;
+  border-top: 3px solid var(--green);
+  background: var(--green-tint);
+}
+.kf.c1 { border-top-color: var(--blue); background: var(--blue-tint); }
+.kf.c2 { border-top-color: var(--green); background: var(--green-tint); }
+.kf.c3 { border-top-color: var(--green-deep); background: var(--green-tint); }
+.kf.c4 { border-top-color: var(--ink); background: var(--paper-deep); }
+.kf .n {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+.kf.c1 .n { color: var(--blue); }
+.kf.c2 .n { color: var(--green); }
+.kf.c3 .n { color: var(--green-deep); }
+.kf.c4 .n { color: var(--ink); }
+.kf .l {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.article-content p {
+  font-family: var(--sans);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+}
+.article-content p:first-of-type {
+  font-size: 1.12rem;
+  line-height: 1.65;
+  color: var(--ink);
+  padding-left: 16px;
+  border-left: 3px solid var(--part-accent, var(--green));
+}
+
+.site-note {
+  display: none;
+  margin: 28px 0;
+  padding: 16px 18px 16px 20px;
+  background: var(--green-tint);
+  border-left: 3px solid var(--green);
+  border-radius: 0 3px 3px 0;
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+.site-note::before {
+  content: '● Site note';
+  display: block;
+  font-family: var(--mono);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+  margin-bottom: 8px;
+}
+body.show-notes .site-note { display: block; }
+
+.statutes {
+  display: none;
+  margin-top: 52px;
+  padding-top: 36px;
+  border-top: 2px solid var(--rule-strong);
+}
+body.show-notes .statutes { display: block; }
+.statutes h3 {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-deep);
+  margin-bottom: 24px;
+  display: flex; align-items: center; gap: 8px;
+}
+.statutes h3 .sym { font-size: 0.9rem; }
+.statute {
+  margin-bottom: 20px;
+  padding: 20px 22px;
+  background: var(--blue-tint);
+  border-left: 3px solid var(--blue);
+  border-radius: 0 3px 3px 0;
+}
+.statute:last-child { margin-bottom: 0; }
+.statute .act {
+  font-family: var(--display-eco);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--blue-deep);
+  line-height: 1.3;
+  margin-bottom: 3px;
+  letter-spacing: -0.02em;
+}
+.statute .year {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+.statute .provision {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  padding: 9px 0;
+  border-top: 1px solid rgba(0,79,138,0.14);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.statute .provision:first-of-type { border-top: none; padding-top: 0; }
+.statute .provision .sec {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--blue-deep);
+  letter-spacing: 0.02em;
+  padding-top: 3px;
+}
+
+.art-chart {
+  margin: 32px 0 28px;
+  padding: 24px 24px 20px;
+  background: var(--paper-deep);
+  border-radius: 3px;
+  border-left: 3px solid var(--green);
+}
+.ac-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.ac-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+  margin-bottom: 6px;
+}
+.ac-title {
+  font-family: var(--display-cli);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+.ac-legend {
+  display: flex;
+  gap: 16px;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+.ac-legend .lg { display: inline-flex; align-items: center; gap: 6px; }
+.ac-legend .sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.ac-legend .sw.dry { background: var(--green); }
+.ac-legend .sw.wet { background: var(--blue); }
+.ac-legend .sw.line { background: var(--ink); height: 2px; border-radius: 0; }
+
+.ac-canvas {
+  position: relative;
+  height: 190px;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--rule);
+}
+.ac-col {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  min-width: 0;
+}
+.ac-col .bar {
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+  min-height: 3px;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+.ac-col.dry .bar { background: var(--green); }
+.ac-col.wet .bar { background: var(--blue); }
+.ac-col.current .bar { box-shadow: 0 0 0 2px var(--ink); }
+.ac-col:hover .bar,
+.ac-col.active .bar { filter: brightness(1.1); }
+.ac-canvas:hover .ac-col:not(:hover):not(.active) { opacity: 0.4; }
+.ac-col .lbl {
+  position: absolute;
+  bottom: -18px;
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  color: var(--faint);
+  letter-spacing: 0.04em;
+  transition: color 0.15s ease;
+}
+.ac-col.current .lbl,
+.ac-col.active .lbl { color: var(--ink); font-weight: 500; }
+
+.ac-line-svg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+.ac-line {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  opacity: 0.7;
+}
+.ac-dot {
+  fill: var(--paper-deep);
+  stroke: var(--ink);
+  stroke-width: 1.4;
+  vector-effect: non-scaling-stroke;
+  opacity: 0.7;
+}
+
+.ac-info {
+  margin-top: 30px;
+  padding: 16px 18px;
+  background: var(--paper);
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  min-height: 68px;
+}
+.ac-info .month-name {
+  font-family: var(--display-cli);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.ac-info .month-nums {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  line-height: 1.55;
+}
+.ac-info .month-nums .v { color: var(--ink); font-weight: 500; }
+.ac-info .month-nums .v.rain { color: var(--blue); }
+.ac-info .month-nums .v.temp { color: var(--green-deep); }
+.ac-info .month-note {
+  font-family: var(--sans);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  align-self: center;
+}
+
+.start-block {
+  margin-top: 56px;
+  padding: 28px 28px 26px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 3px;
+  position: relative;
+}
+.start-block::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--green) 0%, var(--green) 33.33%,
+    #FFFFFF 33.33%, #FFFFFF 66.66%,
+    var(--blue) 66.66%, var(--blue) 100%);
+  border-radius: 3px 3px 0 0;
+}
+.start-block .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+.start-block p {
+  font-family: var(--sans);
+  font-size: 1.04rem;
+  line-height: 1.55;
+  color: var(--paper);
+  margin-bottom: 20px;
+}
+.start-block a {
+  display: inline-block;
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--paper);
+  padding-bottom: 2px;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.start-block a:hover { color: var(--green); border-color: var(--green); }
+
+.read-mode {
+  margin-top: 44px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  letter-spacing: 0.02em;
+}
+.read-mode button {
+  background: none; border: none;
+  font-family: inherit; font-size: inherit;
+  color: var(--muted); cursor: pointer;
+  padding: 0; letter-spacing: inherit;
+  border-bottom: 1px dotted currentColor;
+  padding-bottom: 1px;
+}
+.read-mode button:hover { color: var(--green); }
+.read-mode button.active { color: var(--green); border-bottom: 1px solid var(--green); }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 720px) {
+  .top { padding: 12px 18px; gap: 10px; }
+  .top-left { gap: 12px; }
+  .brand { font-size: 0.8rem; }
+  .lang-toggle { font-size: 0.58rem; }
+  .lang-toggle button { padding: 3px 8px; }
+  .back { font-size: 0.66rem; }
+  main { padding: 56px 20px 72px; }
+  .hero { margin-bottom: 44px; }
+  .hero-title-row { gap: 16px; margin-bottom: 20px; }
+  .contour-mark { width: 56px; height: 56px; }
+  h1 { font-size: clamp(2.4rem, 11vw, 3.2rem); letter-spacing: -0.035em; }
+  .hero-sub { font-size: 1.06rem; }
+  .ribbon { margin: 0 -20px 56px; padding: 0 20px; }
+  .ribbon-item { min-width: 118px; padding: 20px 14px 16px; }
+  .ribbon-item .num { font-size: 2rem; }
+  .ribbon-item .lbl { font-size: 0.56rem; letter-spacing: 0.08em; }
+  .part { margin-bottom: 44px; }
+  .part-head { gap: 12px; }
+  .part-head h2 { font-size: 1.35rem; letter-spacing: -0.025em; }
+  .part-head .part-meta { display: none; }
+  .part-num { font-size: 0.6rem; padding: 3px 7px; }
+  .articles a { grid-template-columns: 32px 1fr; gap: 0 12px; padding: 14px 0; }
+  .articles a::before { font-size: 0.66rem; }
+  .articles a .chips { grid-column: 2; padding-top: 10px; gap: 5px; }
+  .article-title { font-size: 1.02rem; letter-spacing: -0.012em; }
+  .closing { margin-top: 60px; }
+  .closing p { font-size: 1.15rem; }
+  footer { padding: 20px 20px 24px; }
+  .footer-inner { font-size: 0.7rem; }
+  .article-bar { padding: 12px 20px; font-size: 0.68rem; }
+  .article-content { padding: 0 20px 80px; }
+  .article-content::before { left: 20px; width: 36px; }
+  .article-content .kicker { margin: 32px 0 20px; }
+  .article-content p { font-size: 0.98rem; line-height: 1.7; }
+  .article-content p:first-of-type { font-size: 1.05rem; }
+  .key-figures { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+  .kf { padding: 14px 13px 12px; }
+  .kf .n { font-size: 1.35rem; }
+  .statute { padding: 16px 16px; }
+  .statute .provision { grid-template-columns: 1fr; gap: 2px; }
+  .season { flex-direction: column; align-items: flex-start; gap: 10px; font-size: 0.68rem; }
+  .season svg { transform: scale(0.9); transform-origin: left center; }
+  .start-block { padding: 22px 20px; }
+  .start-block p { font-size: 1rem; }
+  .art-chart { padding: 20px 14px 16px; margin: 24px 0 20px; }
+  .ac-title { font-size: 1rem; }
+  .ac-canvas { height: 150px; gap: 2px; }
+  .ac-col .lbl { font-size: 0.5rem; bottom: -16px; }
+  .ac-info { grid-template-columns: 1fr; gap: 10px; padding: 14px 16px; }
+  .ac-info .month-note { font-size: 0.9rem; }
+  .ac-legend { gap: 10px; font-size: 0.54rem; }
+  .ac-legend .sw { width: 8px; height: 8px; }
+}
+
+@media (max-width: 420px) {
+  .brand { display: none; }
+  .ribbon-item { min-width: 104px; padding: 18px 12px 14px; }
+  .ribbon-item .num { font-size: 1.7rem; }
+  .articles a::before { font-size: 0.62rem; }
+  .article-title { font-size: 0.98rem; }
+  .chip { font-size: 0.54rem; padding: 2px 6px; letter-spacing: 0.04em; }
+  .key-figures { grid-template-columns: 1fr 1fr; }
+  .kf .n { font-size: 1.22rem; }
+  .ac-canvas { height: 130px; }
+  .ac-col .lbl { font-size: 0.48rem; bottom: -14px; }
+  .ac-info .month-name { font-size: 1.02rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-left">
+    <a href="/" class="brand">Konstatines Consulting</a>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button id="lang-en" class="active" aria-pressed="true">EN</button>
+      <button id="lang-kri" aria-pressed="false">KRI</button>
+    </div>
+  </div>
+  <a href="/#knowledge" class="back" data-i18n="backIndex">← Index</a>
+</header>
+
+<main>
+
+  <section class="hero">
+    <p class="eyebrow" data-i18n="eyebrow">Knowledge Base · Country</p>
+    <div class="hero-title-row">
+      <span class="contour-mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <path class="c-line" d="M 12,52
+            C 12,32 30,14 52,14
+            C 74,14 88,30 88,50
+            C 88,70 72,86 50,86
+            C 30,86 12,74 12,52 Z"/>
+          <path class="c-line" d="M 24,52
+            C 24,38 37,26 52,26
+            C 67,26 78,38 78,52
+            C 78,66 66,76 52,76
+            C 38,76 24,66 24,52 Z"/>
+          <path class="c-line inner" d="M 36,52
+            C 36,44 44,36 52,36
+            C 60,36 68,44 68,52
+            C 68,60 60,68 52,68
+            C 44,68 36,60 36,52 Z"/>
+          <circle class="c-dot" cx="52" cy="52" r="3"/>
+        </svg>
+      </span>
+      <h1>Sierra Leone</h1>
+    </div>
+    <p class="hero-sub" data-i18n="heroSub">A reference on the land, climate, people, economy, and the laws that govern ownership and investment — with figures, statutes, and notes from the ground.</p>
+    <div class="season">
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="18" fill="none" stroke="#D8D2C7" stroke-width="2"/>
+        <circle id="season-arc" cx="22" cy="22" r="18" fill="none" stroke="#2E7D3A" stroke-width="2"
+                stroke-linecap="round" transform="rotate(-90 22 22)"
+                stroke-dasharray="113" stroke-dashoffset="113"/>
+        <circle cx="22" cy="22" r="2.5" fill="#1C1C1C"/>
+      </svg>
+      <div class="season-data">
+        <span id="s-date">—</span>
+        <span class="dot">·</span>
+        <span><span class="val" id="s-season">—</span> <span data-i18n="seasonWord">season</span></span>
+        <span class="dot">·</span>
+        <span><span class="val" id="s-days">—</span> <span data-i18n="untilNext">until next</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ribbon">
+    <div class="ribbon-inner">
+      <div class="ribbon-item">
+        <span class="num">71,740<span class="u">km²</span></span>
+        <span class="lbl" data-i18n="factArea">Total area</span>
+      </div>
+      <div class="ribbon-item">
+        <span class="num">402<span class="u">km</span></span>
+        <span class="lbl" data-i18n="factCoast">Atlantic coastline</span>
+      </div>
+      <div class="ribbon-item">
+        <span class="num">1,948<span class="u">m</span></span>
+        <span class="lbl" data-i18n="factPeak">Loma Mansa</span>
+      </div>
+      <div class="ribbon-item">
+        <span class="num">9.3<span class="u">M</span></span>
+        <span class="lbl" data-i18n="factPop">Population (2025)</span>
+      </div>
+      <div class="ribbon-item">
+        <span class="num">5</span>
+        <span class="lbl" data-i18n="factRegions">Administrative regions</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="part part-1-1">
+    <header class="part-head">
+      <span class="part-num">1.1</span>
+      <h2 data-i18n="partGeo">Geography</h2>
+      <span class="part-meta" data-i18n="metaFour">4 articles</span>
+    </header>
+    <ol class="articles">
+      <li><a data-article="where">
+        <span class="article-title" data-i18n="artWhere">Where is Sierra Leone?</span>
+        <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+      <li><a data-article="peninsula">
+        <span class="article-title" data-i18n="artPeninsula">The Freetown Peninsula</span>
+        <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+      <li><a data-article="regions">
+        <span class="article-title" data-i18n="artRegions">Regions, Districts and Terrain</span>
+        <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+      <li><a data-article="rivers">
+        <span class="article-title" data-i18n="artRivers">Rivers and Estuaries</span>
+        <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+    </ol>
+  </section>
+
+  <section class="part part-1-2">
+    <header class="part-head">
+      <span class="part-num">1.2</span>
+      <h2 data-i18n="partCli">Climate</h2>
+      <span class="part-meta" data-i18n="metaFour">4 articles</span>
+    </header>
+    <ol class="articles">
+      <li><a data-article="seasons">
+        <span class="article-title" data-i18n="artSeasons">The Two Seasons</span>
+        <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+      <li><a data-article="rainfall">
+        <span class="article-title" data-i18n="artRainfall">Rainfall and the Building Calendar</span>
+        <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+      <li><a data-article="humidity">
+        <span class="article-title" data-i18n="artHumidity">Humidity, Salt Air and Materials</span>
+        <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+      <li><a data-article="permits">
+        <span class="article-title" data-i18n="artPermits">Building Permits and Site Preparation</span>
+        <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+    </ol>
+  </section>
+
+  <section class="part part-1-3">
+    <header class="part-head">
+      <span class="part-num">1.3</span>
+      <h2 data-i18n="partPeo">People and Urbanisation</h2>
+      <span class="part-meta" data-i18n="metaTwo">2 articles</span>
+    </header>
+    <ol class="articles">
+      <li><a data-article="population">
+        <span class="article-title" data-i18n="artPopulation">Population and Distribution</span>
+        <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+      <li><a data-article="growth">
+        <span class="article-title" data-i18n="artGrowth">Freetown's Growth and Land Pressure</span>
+        <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+    </ol>
+  </section>
+
+  <section class="part part-1-4">
+    <header class="part-head">
+      <span class="part-num">1.4</span>
+      <h2 data-i18n="partEco">Economy, Investment and Law</h2>
+      <span class="part-meta" data-i18n="metaFour">4 articles</span>
+    </header>
+    <ol class="articles">
+      <li><a data-article="leone">
+        <span class="article-title" data-i18n="artLeone">The Leone, Inflation and Foreign Exchange</span>
+        <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+      <li><a data-article="sectors">
+        <span class="article-title" data-i18n="artSectors">Key Sectors and Growth</span>
+        <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
+      </a></li>
+      <li class="flagged"><a data-article="company">
+        <span class="article-title" data-i18n="artCompany">Registering a Company</span>
+        <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip start"><span class="sym">★</span><span data-i18n="chipStart">start here</span></span></span>
+      </a></li>
+      <li class="flagged"><a data-article="ownership">
+        <span class="article-title" data-i18n="artOwnership">Foreign Ownership and Land Law</span>
+        <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip start"><span class="sym">★</span><span data-i18n="chipStart">start here</span></span></span>
+      </a></li>
+    </ol>
+  </section>
+
+  <section class="closing">
+    <p class="label" data-i18n="closingLabel">Contact</p>
+    <p data-i18n="closingText">Planning to build or buy in Sierra Leone? We advise before you commit.</p>
+    <a href="mailto:kt@krent.sl?subject=Country%20Profile%20Inquiry">kt@krent.sl →</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© <span id="year"></span> Konstatines Consulting Services Limited</span>
+    <span><a href="/" data-i18n="footerSite">Site</a><span class="sep">·</span><a href="/#knowledge" data-i18n="footerKB">Knowledge Base</a></span>
+  </div>
+</footer>
+
+<div class="article-view" id="article-view" role="dialog" aria-modal="true" aria-labelledby="art-title">
+  <div class="article-bar">
+    <button class="article-back" id="article-back" data-i18n="backIndex">← Index</button>
+    <span class="article-part-label" id="art-part">—</span>
+  </div>
+  <div class="article-content" id="art-content">
+    <p class="kicker" id="art-kicker">—</p>
+    <h1 id="art-title">—</h1>
+    <p class="article-meta" id="art-meta">—</p>
+    <div id="art-figs"></div>
+    <div id="art-body"></div>
+    <div class="read-mode">
+      <span data-i18n="readingMode">Reading mode</span>
+      <button id="rm-off" class="active" data-i18n="rmOverview">overview</button>
+      <span>·</span>
+      <button id="rm-on" data-i18n="rmNotes">with site notes and statutes</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ================= I18N ================= */
+var I18N = {
+  en: {
+    backIndex: '← Index',
+    eyebrow: 'Knowledge Base · Country',
+    heroSub: 'A reference on the land, climate, people, economy, and the laws that govern ownership and investment — with figures, statutes, and notes from the ground.',
+    seasonWord: 'season',
+    untilNext: 'until next',
+    wet: 'Wet',
+    dry: 'Dry',
+    drySeason: 'dry season',
+    wetSeason: 'wet season',
+    factArea: 'Total area',
+    factCoast: 'Atlantic coastline',
+    factPeak: 'Loma Mansa',
+    factPop: 'Population (2025)',
+    factRegions: 'Administrative regions',
+    partGeo: 'Geography',
+    partCli: 'Climate',
+    partPeo: 'People and Urbanisation',
+    partEco: 'Economy, Investment and Law',
+    metaFour: '4 articles',
+    metaTwo: '2 articles',
+    artWhere: 'Where is Sierra Leone?',
+    artPeninsula: 'The Freetown Peninsula',
+    artRegions: 'Regions, Districts and Terrain',
+    artRivers: 'Rivers and Estuaries',
+    artSeasons: 'The Two Seasons',
+    artRainfall: 'Rainfall and the Building Calendar',
+    artHumidity: 'Humidity, Salt Air and Materials',
+    artPermits: 'Building Permits and Site Preparation',
+    artPopulation: 'Population and Distribution',
+    artGrowth: "Freetown's Growth and Land Pressure",
+    artLeone: 'The Leone, Inflation and Foreign Exchange',
+    artSectors: 'Key Sectors and Growth',
+    artCompany: 'Registering a Company',
+    artOwnership: 'Foreign Ownership and Land Law',
+    chipData: 'data',
+    chipSite: 'site',
+    chipLaw: 'law',
+    chipStart: 'start here',
+    closingLabel: 'Contact',
+    closingText: 'Planning to build or buy in Sierra Leone? We advise before you commit.',
+    footerSite: 'Site',
+    footerKB: 'Knowledge Base',
+    readingMode: 'Reading mode',
+    rmOverview: 'overview',
+    rmNotes: 'with site notes and statutes',
+    updated: 'Updated',
+    stats: 'Statutes',
+    siteNote: '● Site note'
+  },
+  kri: {
+    backIndex: '← Bak',
+    eyebrow: 'Nɔlij Bɛs · Kantri',
+    heroSub: 'Wan refrɛns pan di land, klaymet, pipul dɛn, ɛkɔnɔmi, ɛn di lɔ dɛn we de gɛvɛn ɔnɛship ɛn invɛstmɛnt — wit figɔ dɛn, statut dɛn, ɛn not dɛn frɔm di graun.',
+    seasonWord: 'siin',
+    untilNext: 'bifo nɛks',
+    wet: 'Rɛn',
+    dry: 'Drai',
+    drySeason: 'drai siin',
+    wetSeason: 'rɛn siin',
+    factArea: 'Ɔlɔl Eria',
+    factCoast: 'Atlantik Kɔst',
+    factPeak: 'Loma Mansa',
+    factPop: 'Pɔpyuleshɔn (2025)',
+    factRegions: 'Administrativ rijin dɛn',
+    partGeo: 'Jiografi',
+    partCli: 'Klaymet',
+    partPeo: 'Pipul ɛn Sitii',
+    partEco: 'Ɛkɔnɔmi, Invɛstmɛnt ɛn Lɔ',
+    metaFour: '4 atikul dɛn',
+    metaTwo: '2 atikul dɛn',
+    artWhere: 'Usay Sierra Leone de?',
+    artPeninsula: 'Di Freetown Pɛninshula',
+    artRegions: 'Rijin dɛn, Distrik dɛn ɛn Grɔn',
+    artRivers: 'Riva dɛn ɛn Ɛstuari dɛn',
+    artSeasons: 'Di Tu Siin dɛn',
+    artRainfall: 'Rɛn ɛn di Bildin Kalɛnda',
+    artHumidity: 'Mɔscho, Sɔlt Ea ɛn Matirial dɛn',
+    artPermits: 'Bildin Pɛmit dɛn ɛn Site Pripereshɔn',
+    artPopulation: 'Pɔpyuleshɔn ɛn Aw Pipul Skata',
+    artGrowth: 'Aw Freetown Gro ɛn Prɛshɔ pan Land',
+    artLeone: 'Di Lion, Infleshɔn ɛn Fɔrin Ɛkschenj',
+    artSectors: 'Impɔtant Sɛktɔ dɛn ɛn Gro',
+    artCompany: 'Aw fɔ Rɛjista Kɔmpin',
+    artOwnership: 'Fɔrin Ɔnɛship ɛn Land Lɔ',
+    chipData: 'data',
+    chipSite: 'sayt',
+    chipLaw: 'lɔ',
+    chipStart: 'stat ia',
+    closingLabel: 'Kɔntakt',
+    closingText: 'Yu de plan fɔ bil ɔ bay na Sierra Leone? Wi de advaiz bifo yu kɔmit.',
+    footerSite: 'Sayt',
+    footerKB: 'Nɔlij Bɛs',
+    readingMode: 'Ridin mod',
+    rmOverview: 'ɔvavyuu',
+    rmNotes: 'wit sayt not dɛn ɛn statut dɛn',
+    updated: 'Ɔpdat',
+    stats: 'Statut dɛn',
+    siteNote: '● Sayt not'
+  }
+};
+
+var currentLang = 'en';
+
+function applyLang(lang) {
+  currentLang = lang;
+  var dict = I18N[lang];
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n');
+    if (dict[key] != null) el.textContent = dict[key];
+  });
+  document.querySelectorAll('.site-note').forEach(function (el) {
+    el.setAttribute('data-prefix', dict.siteNote);
+  });
+  document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+  document.getElementById('lang-en').setAttribute('aria-pressed', String(lang === 'en'));
+  document.getElementById('lang-kri').classList.toggle('active', lang === 'kri');
+  document.getElementById('lang-kri').setAttribute('aria-pressed', String(lang === 'kri'));
+  document.documentElement.lang = lang === 'kri' ? 'kri' : 'en';
+  renderSeasonText();
+  if (currentArticleKey) render(currentArticleKey);
+  try { localStorage.setItem('kb-lang', lang); } catch (e) {}
+}
+
+document.getElementById('lang-en').addEventListener('click', function () { applyLang('en'); });
+document.getElementById('lang-kri').addEventListener('click', function () { applyLang('kri'); });
+
+try {
+  var savedLang = localStorage.getItem('kb-lang');
+  if (savedLang === 'kri') currentLang = 'kri';
+} catch (e) {}
+
+/* ================= SEASON ================= */
+var seasonInfo = {};
+(function () {
+  var now = new Date();
+  var y = now.getFullYear();
+  var m = now.getMonth();
+  var wet = m >= 4 && m <= 9;
+  var next, nextNameKey;
+  if (wet) { next = new Date(y, 10, 1); nextNameKey = 'drySeason'; }
+  else {
+    next = (m === 10 || m === 11) ? new Date(y + 1, 4, 1) : new Date(y, 4, 1);
+    nextNameKey = 'wetSeason';
+  }
+  var days = Math.ceil((next - now) / 86400000);
+  var circ = 2 * Math.PI * 18;
+  var frac = (now - new Date(y, 0, 1)) / (new Date(y + 1, 0, 1) - new Date(y, 0, 1));
+  var arc = document.getElementById('season-arc');
+  arc.setAttribute('stroke-dasharray', circ.toFixed(1));
+  arc.setAttribute('stroke-dashoffset', (circ * (1 - frac)).toFixed(1));
+  arc.setAttribute('stroke', wet ? '#0072C6' : '#2E7D3A');
+
+  seasonInfo = {
+    date: now.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }),
+    isWet: wet,
+    days: days,
+    nextNameKey: nextNameKey
+  };
+})();
+
+function renderSeasonText() {
+  var d = I18N[currentLang];
+  document.getElementById('s-date').textContent = seasonInfo.date;
+  document.getElementById('s-season').textContent = seasonInfo.isWet ? d.wet : d.dry;
+  document.getElementById('s-days').textContent =
+    seasonInfo.days + ' ' + (currentLang === 'kri' ? 'de' : 'days') + ' (' + d[seasonInfo.nextNameKey] + ')';
+}
+renderSeasonText();
+
+/* ================= READING MODE ================= */
+(function () {
+  var off = document.getElementById('rm-off');
+  var on = document.getElementById('rm-on');
+  function set(v) {
+    document.body.classList.toggle('show-notes', v);
+    off.classList.toggle('active', !v);
+    on.classList.toggle('active', v);
+    try { localStorage.setItem('kb-notes', v ? '1' : '0'); } catch (e) {}
+  }
+  off.addEventListener('click', function () { set(false); });
+  on.addEventListener('click', function () { set(true); });
+  try { if (localStorage.getItem('kb-notes') === '1') set(true); } catch (e) {}
+})();
+
+/* ================= ARTICLES ================= */
+var A = {
+  'where': {
+    part: 'Country · Geography', partKey: 'geo',
+    title: 'Where is Sierra Leone?', date: 'September 2026',
+    figs: [
+      {n:'71,740 km²', l:'Total area', c:'c1'},
+      {n:'402 km', l:'Atlantic coastline', c:'c1'},
+      {n:'958 km', l:'Land boundary', c:'c2'},
+      {n:'1,948 m', l:'Highest point', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'Sierra Leone sits on the west coast of Africa, bordered by Guinea to the north and east, Liberia to the southeast, and the Atlantic Ocean to the west and southwest. It covers 71,740 square kilometres — slightly smaller than South Carolina or roughly the size of Ireland. Its coastline runs 402 kilometres along the Atlantic.'},
+      {t:'p', v:'The land boundary totals 958 kilometres: 652 kilometres with Guinea and 306 kilometres with Liberia. The country extends approximately 330 kilometres from west to east and 340 kilometres from north to south. It lies between latitudes 6° and 10°N and longitudes 10° and 14°W.'},
+      {t:'p', v:'The land rises from a narrow coastal plain in the west to interior lowlands and savanna, then to highlands in the east. The highest point is Loma Mansa (also called Mount Bintumani) at 1,948 metres, in the Loma Mountains. The interior plateau averages 300 to 600 metres.'},
+      {t:'site', v:'The coastline is not uniform. Estuaries, mangrove flats, and shifting sandbars make some stretches difficult to access or build near. Coastal land is cheap for a reason — check drainage history and tidal range before you buy.'},
+      {t:'site', v:'From Freetown, the drive to Bo takes about 4 hours in dry season and can stretch to 6 or 7 in heavy rain. The road is paved but narrow. If your project depends on haulage from the capital, build the travel time into your cost model.'}
+    ]
+  },
+  'peninsula': {
+    part: 'Country · Geography', partKey: 'geo',
+    title: 'The Freetown Peninsula', date: 'September 2026',
+    figs: [
+      {n:'884 m', l:'Peninsula ridge peak', c:'c1'},
+      {n:'1.4 M', l:'Freetown population', c:'c2'},
+      {n:'3 ports', l:'Atlantic access', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'Freetown sits on a mountainous peninsula that rises directly from the Atlantic and curves around one of the largest natural harbours in West Africa. The peninsula\'s ridge peaks at 884 metres at Mount Aureol. Steep slopes drop to narrow coastal strips, and the harbour itself is deep enough to accommodate large vessels.'},
+      {t:'p', v:'The city\'s shape is not a design decision. It is what the terrain permitted. Settlement clings to the shoreline and the flatter land because the interior ridge is difficult to cross. Access roads follow the coast, which is why traffic concentrates on a small number of arteries: the main peninsula road, Regent Road, and the mountain cutoff.'},
+      {t:'p', v:'The harbour was the original reason for the settlement — it is one of the deepest and most sheltered natural harbours on the West African coast. That geography still shapes the city: the port, the industrial area, and the main commercial district all cluster around the waterfront.'},
+      {t:'site', v:'Steep lots are common and rarely obvious from the road. Cut-and-fill is often required, and retaining structures are not a luxury — they are structure. Budget the earthworks before you commit to the view.'},
+      {t:'site', v:'A plot five minutes from the main road can take forty minutes in the wet season if the access track is unpaved. Check the road condition in July, not January.'},
+      {t:'law', items: [
+        {act: 'Town and Country Planning Act', year: 'Cap. 81, 1979; amended 2001',
+         entries: [
+           {s:'Section 3', v:'Establishes the Town and Country Planning Board as the authority for town and country planning.'},
+           {s:'1999', v:'The whole of Sierra Leone was declared a planning area, so planning control applies nationwide.'},
+           {s:'2025', v:'The National Country Planning Act 2025 replaces the 1946 legislation, modernising spatial planning, zoning, development control and disaster-risk reduction.'}
+         ]}
+      ]}
+    ]
+  },
+  'regions': {
+    part: 'Country · Geography', partKey: 'geo',
+    title: 'Regions, Districts and Terrain', date: 'September 2026',
+    figs: [
+      {n:'5', l:'Administrative regions', c:'c1'},
+      {n:'16', l:'Districts', c:'c2'},
+      {n:'300–600 m', l:'Interior plateau', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'Sierra Leone is divided into five administrative regions: Eastern, Northern, North West, Southern, and the Western Area. These contain sixteen districts. The Western Area, which includes Freetown, is the smallest region by area but the most densely settled.'},
+      {t:'p', v:'The Western Area contains Freetown and the peninsula: mountainous, coastal, densely settled. The Northern and North West regions are mostly interior lowland and savanna, with the Scarcies river systems to the north. The Southern region is rolling lowland, wetter than the north. The Eastern region rises toward the highlands, including the Loma Mountains and Mount Bintumani at 1,948 metres.'},
+      {t:'p', v:'Terrain varies sharply over short distances. The coastal plain in the west is narrow — often less than 30 kilometres wide — before the land rises. The interior plateau is generally 300 to 600 metres. The eastern highlands push above 1,500 metres in places.'},
+      {t:'site', v:'Terrain drives cost. Interior lowland is generally straightforward to work — the question there is drainage, not gradient. The eastern highlands bring slope, haulage distance and heavier rainfall. Coastal and peninsula sites bring steepness and access limits. None of these disqualify a site; they are budgeting facts.'}
+    ]
+  },
+  'rivers': {
+    part: 'Country · Geography', partKey: 'geo',
+    title: 'Rivers and Estuaries', date: 'September 2026',
+    figs: [
+      {n:'5', l:'Major river systems', c:'c1'},
+      {n:'Rokel', l:'Largest estuary', c:'c2'},
+      {n:'Tidal', l:'River mouths', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'Sierra Leone\'s major rivers — the Great and Little Scarcies, the Rokel (also called the Seli), the Sewa, the Moa and the Mano — flow generally west or southwest toward the Atlantic. Several end in wide estuaries rather than clean river mouths.'},
+      {t:'p', v:'The Rokel estuary, near Freetown, is among the largest. It is tidal and broad, and it shapes both shipping and settlement around the capital. The Moa and Mano rivers form part of the southeastern border with Liberia and Guinea. The Sewa drains much of the southern interior. The Scarcies system drains the northern interior toward the coast.'},
+      {t:'p', v:'Because several rivers widen into estuaries before meeting the ocean, the coast is not a single continuous shoreline but a series of tidal inlets and broad water bodies. This shapes where ports, industry and settlement can sit — and where they cannot. The Rokel estuary in particular has supported Freetown\'s role as a port city since its founding.'},
+      {t:'site', v:'The Rokel estuary is tidal. Any construction near the shoreline needs to account for tidal range, not just river flow. Ask what the highest recorded water level is, and design above it.'}
+    ]
+  },
+  'seasons': {
+    part: 'Country · Climate', partKey: 'cli',
+    title: 'The Two Seasons', date: 'September 2026',
+    figs: [
+      {n:'2', l:'Seasons per year', c:'c1'},
+      {n:'30–34°C', l:'Daytime average', c:'c2'},
+      {n:'20%', l:'Harmattan humidity', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'Sierra Leone has two seasons, and they govern the working year. The dry season runs roughly November to April. The wet season runs roughly May to October. Rainfall is heaviest in July and August. Between December and February, the Harmattan — a dry, dusty wind from the Sahara — lowers humidity to around 20% and can reduce visibility.'},
+      {t:'p', v:'Temperatures are relatively stable year-round. Daytime temperatures average around 30°C on the coast and 32–34°C inland. Night-time temperatures range from 22–24°C on the coast to 18–20°C inland. March and April are the hottest months; December and January the coolest.'},
+      {t:'p', v:'The Harmattan brings cooler, drier air but also dust that can affect sensitive equipment and finishes. The wet season brings high humidity — around 90% — and heavy, often sudden rainfall.'},
+      {t:'site', v:'The dry season is the working season. Everything — earthmoving, foundations, haulage, roofing — is scheduled against this window. If a programme slips into late May, it does not slip by a few weeks. It slips by months.'},
+      {t:'site', v:'The Harmattan months (December–February) are often the most comfortable for site work, but the dust can play havoc with paint and sealant curing. Plan finishing works for after the dust settles.'}
+    ]
+  },
+  'rainfall': {
+    part: 'Country · Climate', partKey: 'cli',
+    title: 'Rainfall and the Building Calendar', date: 'September 2026',
+    figs: [
+      {n:'2,000–5,000 mm', l:'Annual rainfall range', c:'c1'},
+      {n:'2,746 mm', l:'Wet-season average', c:'c2'},
+      {n:'26–28°C', l:'Year-round average temp.', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'Sierra Leone is one of the wettest countries in West Africa. Annual rainfall ranges from about 2,000 millimetres in the northeast to over 5,000 millimetres on the Freetown peninsula — making the peninsula one of the wettest coastal locations anywhere. The national average for the wet season is about 2,746 millimetres.'},
+      {t:'chart', v:'rain-temp'},
+      {t:'p', v:'The rainfall pattern is unimodal: most rain falls between late April and early November, with July and August the wettest months. Runoff during this period ranges from 20% to 40% of total annual rainfall, and river levels rise substantially.'},
+      {t:'p', v:'Temperature varies far less than rainfall. Average monthly temperatures in Freetown stay within a narrow band, peaking around April and dipping in August. The practical consequence is a sharp building calendar. Groundworks, excavation and concrete pours are difficult or impossible in the heaviest months. The dry season is finite, and everyone is competing for the same crews and plant within it.'},
+      {t:'site', v:'Plan backwards from the rains, not forwards from today. A build that begins in March has roughly three usable months before conditions turn. Begin in November and you have the full window. Same house, same materials, very different programme.'},
+      {t:'law', items: [
+        {act: 'Environment Protection Agency Act', year: 'No. 11 of 2008; amended 2010, 2022',
+         entries: [
+           {s:'Part VI', v:'Deals exclusively with activities requiring an Environmental Impact Assessment (EIA) and the requirements of an EIA.'},
+           {s:'Screening', v:'The EPA screens projects into Category A, B or C. Categories A and B require an EIA; Category C requires registration and screening only.'}
+         ]}
+      ]}
+    ]
+  },
+  'humidity': {
+    part: 'Country · Climate', partKey: 'cli',
+    title: 'Humidity, Salt Air and Materials', date: 'September 2026',
+    figs: [
+      {n:'90%', l:'Wet-season humidity', c:'c1'},
+      {n:'6–8 hrs', l:'Dry-season sun', c:'c2'},
+      {n:'2–4 hrs', l:'Wet-season sun', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'Coastal Sierra Leone is humid and salt-laden. Relative humidity is around 90% during the rainy season, dropping to about 20% during the Harmattan. Inland, humidity is lower but still significant in the wet season.'},
+      {t:'p', v:'Salt air corrodes untreated metal, accelerates the decay of some finishes, and shortens the life of anything installed without coastal specification. Humidity drives mould, weakens some timber, and affects how concrete cures. Sunshine averages 6–8 hours per day in the dry season and only 2–4 hours per day in the wet.'},
+      {t:'p', v:'The combination of salt, humidity and heat is aggressive. Galvanised steel, untreated aluminium and standard fixings all degrade faster here than in temperate climates. Specification is where coastal buildings succeed or fail.'},
+      {t:'site', v:'Materials that work inland may fail on the coast, and the failure often appears years after the client has moved in. Specification is not the place to save money. Ask any supplier whether a material is rated for coastal installation — then ask them again.'}
+    ]
+  },
+  'permits': {
+    part: 'Country · Climate', partKey: 'cli',
+    title: 'Building Permits and Site Preparation', date: 'September 2026',
+    figs: [
+      {n:'8 days', l:'Standard permit timeline', c:'c1'},
+      {n:'1 year', l:'Permit validity', c:'c2'},
+      {n:'50%', l:'Renewal fee', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'Site preparation must account for the season. Excavation in saturated ground is slower, more expensive and often unstable. Access tracks that carry a lorry in January can be impassable in July. Drainage designed in the dry season must handle the wet.'},
+      {t:'p', v:'Construction in Sierra Leone requires a building permit issued by the relevant local council. The application process is defined by the Local Government Act and administered by the Office of the Chief Building Inspector. The Ministry of Lands, Housing and Country Planning mandates that all new construction, repairs and demolitions must be approved before work begins.'},
+      {t:'site', v:'Visit the site in the wet season if you possibly can, even if every other visit is dry. One wet-season visit tells you more about drainage, access and soil behaviour than a dozen dry ones.'},
+      {t:'law', items: [
+        {act: 'Local Government Act', year: '2004; amended 2017, 2022',
+         entries: [
+           {s:'Permits', v:'Local councils issue construction permits to regulate construction activity and ensure compliance with urban planning.'},
+           {s:'Application', v:'Submit to the Office of the Chief Building Inspector: two copies of architectural drawings at 1:8 scale; one signed survey plan from the Director of Surveys and Lands.'},
+           {s:'Timeline', v:'Application submitted (1 day); site inspection (3 days); payment and registration (1 day); permit issued within 8 days.'}
+         ]}
+      ]}
+    ]
+  },
+  'population': {
+    part: 'Country · People', partKey: 'peo',
+    title: 'Population and Distribution', date: 'September 2026',
+    figs: [
+      {n:'9.3 M', l:'Total population', c:'c1'},
+      {n:'42%', l:'Under 15', c:'c2'},
+      {n:'62%', l:'Rural population', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'Sierra Leone\'s population is approximately 9.3 million. The country is moderately urbanised, with 62% of people living outside the cities. The population is young: 42% are under 15.'},
+      {t:'p', v:'Freetown is by far the largest city, with a population of about 1.4 million. Other significant cities include Bo (174,354), Kenema (143,137), Koidu (88,000), Makeni (87,679) and Lunsar (22,461).'},
+      {t:'p', v:'The largest ethnic groups are the Temne (35.5%) and the Mende (33.2%). Others include the Limba (6.4%), Kono (4.4%), Fullah (3.4%), Loko (2.9%), Koranko (2.8%), Sherbro (2.6%), Mandingo (2.4%) and Krio (1.2%). English is the official language; Krio is the everyday lingua franca.'},
+      {t:'site', v:'Language matters commercially. A buyer communicating in English may not realise how much of the on-the-ground conversation happens in Krio, Temne or Mende — and how much can shift in translation. A local representative who speaks the room is not optional.'}
+    ]
+  },
+  'growth': {
+    part: 'Country · People', partKey: 'peo',
+    title: 'Freetown\'s Growth and Land Pressure', date: 'September 2026',
+    figs: [
+      {n:'1.4 M', l:'Freetown population', c:'c1'},
+      {n:'2025', l:'New planning act', c:'c2'},
+      {n:'§ 87', l:'Prohibits unpermitted build', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'Freetown has grown faster than its infrastructure. The peninsula\'s geography limits how far the city can spread, so growth presses into the hillsides, into low-lying ground, and outward beyond the peninsula\'s edges. The result is sustained pressure on land, roads, drainage and services.'},
+      {t:'p', v:'This pressure is the engine behind land prices in and around the capital. It is also the reason why some plots that look cheap are cheap: steep, without safe access, or sited on ground that has never been surveyed for building. The market prices the risk, even when a buyer does not see it.'},
+      {t:'p', v:'The National Country Planning Act 2025 replaced the 1946 legislation and introduced stronger development control, including provisions for disaster risk reduction and climate adaptation. Enforcement remains uneven, but the legal framework is now clearer.'},
+      {t:'site', v:'Growth pressure is what makes some plots valuable and others difficult. Land that is cheap because it is steep or without safe access is not a bargain. It is a future problem with a purchase price attached.'},
+      {t:'law', items: [
+        {act: 'National Country Planning Act', year: '2025',
+         entries: [
+           {s:'Purpose', v:'Replaces the 1946 Town and Country Planning Act. Introduces national policies for disaster risk reduction and climate adaptation.'},
+           {s:'Section 87', v:'Prohibits the construction of houses, fences, warehouses, stores, shops and other structures without the necessary planning permissions and approvals.'},
+           {s:'Enforcement', v:'The Ministry of Lands has warned that no construction work should begin without a valid building permit and approved structural plans.'}
+         ]}
+      ]}
+    ]
+  },
+  'leone': {
+    part: 'Country · Economy', partKey: 'eco',
+    title: 'The Leone, Inflation and Foreign Exchange', date: 'September 2026',
+    figs: [
+      {n:'10.5%', l:'Inflation, end-2025', c:'c1'},
+      {n:'2022', l:'Currency redenominated', c:'c2'},
+      {n:'SLE', l:'New currency code', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'Sierra Leone\'s currency is the Leone. In 2022 it was redenominated, with three zeros removed and a new currency code (SLE) introduced. The Leone has historically been volatile against major currencies, and inflation was running at 10.5% at the end of 2025.'},
+      {t:'p', v:'For anyone paying from abroad this matters: a quoted price in Leone and a quoted price in dollars are not the same commitment, and the gap between them can move quickly. The National Investment Board Act 2022 provides for the free transfer of funds and protection against expropriation, but the practical mechanics of moving money still require care.'},
+      {t:'p', v:'Foreign capital inflows and outflows are subject to review by the financial intelligence authorities. Repatriation of profits is permitted under the investment framework, but documentation and compliance matter.'},
+      {t:'site', v:'Agree the currency of payment and the exchange-rate basis in writing before work starts. "The price in Leones" and "the price in dollars" are not the same agreement, and the difference has ended more than one project.'},
+      {t:'law', items: [
+        {act: 'National Investment Board Act', year: 'No. 11 of 2022',
+         entries: [
+           {s:'Part V', v:'Contains provisions for the free transfer of funds and protection against expropriation.'},
+           {s:'NIB', v:'Establishes the National Investment Board as a one-stop shop for investment facilitation and registration.'}
+         ]}
+      ]}
+    ]
+  },
+  'sectors': {
+    part: 'Country · Economy', partKey: 'eco',
+    title: 'Key Sectors and Growth', date: 'September 2026',
+    figs: [
+      {n:'4.5%', l:'IMF growth forecast, 2026', c:'c1'},
+      {n:'4.3%', l:'GDP growth, 2024', c:'c2'},
+      {n:'Mining', l:'Lead export sector', c:'c3'}
+    ],
+    body: [
+      {t:'p', v:'The economy grew by 4.3% in 2024, driven primarily by mining, services and agricultural recovery. The IMF projects GDP growth of 4.5% for 2026, reflecting continued expansion in mining output and gradual recovery in services.'},
+      {t:'p', v:'Mining — diamonds, rutile, bauxite, iron ore and gold — drives export earnings and fiscal swings. Agriculture employs a large share of the workforce, with rice as the staple and cocoa, coffee and palm oil as significant crops. Services, including trade and telecommunications, account for a growing share of activity.'},
+      {t:'p', v:'Construction sits at the intersection of all three: mining and services drive urban demand for property and infrastructure, while agriculture shapes rural land use. Each sector moves the cost of materials and labour in the capital.'},
+      {t:'site', v:'Mining swings move the whole economy, and construction costs move with it. A budget set in a boom year will look very different in a lean one. Price with margin, not optimism.'}
+    ]
+  },
+  'company': {
+    part: 'Country · Economy', partKey: 'eco',
+    title: 'Registering a Company', date: 'September 2026',
+    figs: [
+      {n:'No', l:'Residency requirement', c:'c1'},
+      {n:'1', l:'Minimum director', c:'c2'},
+      {n:'Lc 1,000,000', l:'Nominal share capital', c:'c3'},
+      {n:'3–5 days', l:'Typical registration', c:'c4'}
+    ],
+    body: [
+      {t:'p', v:'The Companies Act 2009 (Act No. 5 of 2009) governs company formation in Sierra Leone. The Corporate Affairs Commission (CAC) is the registrar. A private limited liability company — the most common structure for foreign investors — can be formed with just one shareholder and one director, both of any nationality, with no residency requirement in Sierra Leone.'},
+      {t:'p', v:'The Act specifies a nominal share capital of not less than Lc1,000,000 for a private company, with 25 percent taken by subscribers. In practice, the National Investment Board states there is no minimum paid-in capital requirement for private companies, and a nominal figure is typically used at registration. The articles of association must specify the nature of the business activities.'},
+      {t:'p', v:'Registration is available through the National Investment Board\'s One-Stop Business Registration Centre or directly with the Corporate Affairs Commission. The typical timeline is 3–5 working days through the NIB, or 2–4 weeks if incorporating directly with the CAC. Registration fees vary by business type and size; check the official fee schedule. After incorporation, a Tax Identification Number (TIN) is issued, and a municipal business licence — initially valid for six months — is required before operations begin.'},
+      {t:'p', v:'Foreign investors often use corporate service providers to handle registration, which may charge between USD 5,000 and USD 6,000. The documents required include a valid ID or passport, business name approval, a completed application form, and payment receipt.'},
+      {t:'law', items: [
+        {act: 'Companies Act', year: 'No. 5 of 2009; amended 2014',
+         entries: [
+           {s:'Section 28', v:'Governs company names: no company may be incorporated with a name identical to an existing registered business without consent.'},
+           {s:'Directors', v:'Every company must appoint at least one director at the time of incorporation.'},
+           {s:'Capital', v:'Nominal share capital of not less than Lc1,000,000, with 25 percent taken by subscribers.'}
+         ]},
+        {act: 'National Investment Board Act', year: 'No. 11 of 2022',
+         entries: [
+           {s:'One-stop shop', v:'The NIB provides a single point of registration for company incorporation, TIN, NASSIT (social security) and municipal licence.'},
+           {s:'Timeline', v:'Business registration is typically completed within 3–5 working days for straightforward applications; work permits within 5 days.'}
+         ]}
+      ]},
+      {t:'start', eyebrow: '★ Start here',
+       text: 'If you are planning to register a company in Sierra Leone — as a foreign investor, a returning national, or a joint venture — we can walk you through the structure, the documentation, and the realistic timeline before you commit a single dollar.',
+       link: 'kt@krent.sl?subject=Company%20Registration%20Inquiry',
+       linkText: 'Talk to us about registering a company →'}
+    ]
+  },
+  'ownership': {
+    part: 'Country · Economy', partKey: 'eco',
+    title: 'Foreign Ownership and Land Law', date: 'September 2026',
+    figs: [
+      {n:'55 yrs', l:'Standard lease', c:'c1'},
+      {n:'21 yrs', l:'Renewal option', c:'c2'},
+      {n:'50 yrs', l:'Provincial lease cap', c:'c3'},
+      {n:'5%', l:'Local share requirement', c:'c4'}
+    ],
+    body: [
+      {t:'p', v:'This is the point on which foreign transactions most often come unstuck, and it requires current legal advice rather than a summary. The principle is that non-citizens do not enjoy the same rights to hold land as citizens. Freehold ownership is generally not available to non-citizens.'},
+      {t:'p', v:'Foreign investors can take leases for terms of not more than 55 years, with an option to renew for a further 21 years in most cases. In the provinces, where customary tenure applies, the lease term is capped at 50 years. For mining and large agricultural investments, leases of up to 99 years are possible. Foreign land-based investments must reserve at least 5% of shares for Sierra Leoneans.'},
+      {t:'p', v:'The Customary Land Rights Act 2022 (No. 20 of 2022) governs land subject to customary law. It protects customary land rights, eliminates discrimination under customary law, guarantees equal rights for women, and grants communities the right to free, prior and informed consent over industrial activity on their territory. The National Land Commission Act 2022 (No. 19 of 2022) establishes the Commission and District Land Commissions to administer land nationally.'},
+      {t:'site', v:'Do not buy anything across a border without a Sierra Leonean lawyer who does this work routinely — not a generalist, not a friend of the seller. The structure of the holding is as important as the land itself, and a badly structured purchase can be unwound years later.'},
+      {t:'law', items: [
+        {act: 'Customary Land Rights Act', year: 'No. 20 of 2022',
+         entries: [
+           {s:'Purpose', v:'Protects customary land rights, eliminates discrimination under customary law, and governs the administration of customary land. Divided into ten Parts and 48 articles.'},
+           {s:'Women', v:'Guarantees equal rights in land ownership and mandates joint registration for married or cohabiting individuals.'},
+           {s:'Consent', v:'Grants communities the right to free, prior and informed consent over industrial activity on their territory.'},
+           {s:'Non-citizens', v:'Leasehold not to exceed 50 years in the provinces. At least 5% of shares in any foreign land-based investment reserved for Sierra Leoneans.'}
+         ]},
+        {act: 'National Land Commission Act', year: 'No. 19 of 2022',
+         entries: [
+           {s:'Purpose', v:'Establishes the National Land Commission and District Land Commissions to secure effective and holistic land administration. 91 articles in thirteen Parts.'},
+           {s:'Communal land', v:'Defines communal land as any land subject to customary law, including wetlands, forests, grazing lands and market areas.'},
+           {s:'Dispute resolution', v:'The Commission has authority to regulate all conduct relating to land, including dispute resolution.'}
+         ]},
+        {act: 'Non-Citizens (Interests in Land) Act', year: 'No. 30 of 1966',
+         entries: [
+           {s:'Western Area', v:'Prohibits non-citizens from purchasing freehold land in the Western Area without a licence from the Board established under the Act. In practice, non-citizens take leases.'},
+           {s:'Reserved leasehold', v:'Restricts acquisition of reserved leasehold land without a licence.'}
+         ]},
+        {act: 'National Investment Board Act', year: 'No. 11 of 2022',
+         entries: [
+           {s:'Foreign investment', v:'The NIB facilitates and registers foreign investment. Local content requirements apply.'},
+           {s:'Restrictions', v:'The government imposes caps on foreign ownership in mining, fisheries and banking.'},
+           {s:'Protection', v:'Provides for free transfer of funds and protection against expropriation.'}
+         ]}
+      ]},
+      {t:'start', eyebrow: '★ Start here',
+       text: 'If you are considering buying or leasing land in Sierra Leone as a non-citizen, or structuring a purchase from abroad, we can review your position, identify the right holding structure, and connect you with the legal and title work that has to happen before money changes hands.',
+       link: 'kt@krent.sl?subject=Land%20Ownership%20Inquiry',
+       linkText: 'Talk to us about land ownership →'}
+    ]
+  }
+};
+
+/* ================= INLINE ARTICLE CHART ================= */
+var FREETOWN = [
+  {m:'J', full:'January',  r:3,   t:27.3, season:'dry', note:'Peak working season. Clear skies, firm ground, full haulage.'},
+  {m:'F', full:'February', r:6,   t:27.7, season:'dry', note:'Continues dry. Harmattan dust may affect finishing works.'},
+  {m:'M', full:'March',    r:28,  t:28.2, season:'dry', note:'Still dry. Warmest month. Last full window before the rains.'},
+  {m:'A', full:'April',    r:68,  t:28.4, season:'dry', note:'Late dry. Rains arrive in the final week. Close out groundwork now.'},
+  {m:'M', full:'May',      r:218, t:27.9, season:'wet', note:'Rains begin. Groundwork slows. Earthmoving windows narrow.'},
+  {m:'J', full:'June',     r:420, t:27.0, season:'wet', note:'Heavy rain. Excavation unstable. Interior work only.'},
+  {m:'J', full:'July',     r:640, t:26.1, season:'wet', note:'Wettest month. Groundwork effectively on hold.'},
+  {m:'A', full:'August',   r:720, t:25.9, season:'wet', note:'Peak rainfall. Access tracks fail. Planning and verification only.'},
+  {m:'S', full:'September',r:550, t:26.3, season:'wet', note:'Still heavy. Late September and late October are the windows.'},
+  {m:'O', full:'October',  r:300, t:26.9, season:'wet', note:'Rains receding. Groundwork can restart late in the month.'},
+  {m:'N', full:'November', r:95,  t:27.4, season:'dry', note:'Dry season opens. Mobilise now — the window is finite.'},
+  {m:'D', full:'December', r:20,  t:27.3, season:'dry', note:'Full dry season. Best window for foundations and haulage.'}
+];
+
+function buildArticleChart(containerId) {
+  var chart = document.getElementById(containerId);
+  if (!chart) return;
+  var canvas = chart.querySelector('.ac-canvas');
+  var info = chart.querySelector('.ac-info');
+  if (!canvas || !info) return;
+
+  var curMonth = new Date().getMonth();
+  var maxR = 720;
+  var tMin = 25.5, tMax = 29.0;
+  var cols = [];
+
+  FREETOWN.forEach(function (item, i) {
+    var col = document.createElement('div');
+    col.className = 'ac-col ' + item.season + (i === curMonth ? ' current' : '');
+    col.setAttribute('data-i', i);
+    col.setAttribute('tabindex', '0');
+    col.setAttribute('role', 'button');
+    col.setAttribute('aria-label', item.full + ': ' + item.r + ' mm rainfall, ' + item.t + '°C');
+
+    var bar = document.createElement('div');
+    bar.className = 'bar';
+    bar.style.height = (4 + (item.r / maxR) * 138) + 'px';
+    col.appendChild(bar);
+
+    var lbl = document.createElement('div');
+    lbl.className = 'lbl';
+    lbl.textContent = item.m;
+    col.appendChild(lbl);
+
+    function activate() {
+      cols.forEach(function (c) { c.classList.remove('active'); });
+      col.classList.add('active');
+      show(i);
+    }
+    function deactivate() {
+      col.classList.remove('active');
+      show(curMonth);
+    }
+    col.addEventListener('mouseenter', activate);
+    col.addEventListener('mouseleave', deactivate);
+    col.addEventListener('focus', activate);
+    col.addEventListener('blur', deactivate);
+    col.addEventListener('click', activate);
+
+    canvas.appendChild(col);
+    cols.push(col);
+  });
+
+  var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('class', 'ac-line-svg');
+  svg.setAttribute('viewBox', '0 0 1200 190');
+  svg.setAttribute('preserveAspectRatio', 'none');
+
+  function yFor(t) {
+    return 5 + (1 - (t - tMin) / (tMax - tMin)) * 45;
+  }
+
+  var d = '';
+  var points = [];
+  FREETOWN.forEach(function (item, i) {
+    var x = 1200 / 12 * (i + 0.5);
+    var y = yFor(item.t);
+    points.push({x: x, y: y});
+    if (i === 0) d += 'M' + x + ' ' + y;
+    else d += ' L' + x + ' ' + y;
+  });
+
+  var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('d', d);
+  path.setAttribute('class', 'ac-line');
+  svg.appendChild(path);
+
+  points.forEach(function (p) {
+    var dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    dot.setAttribute('cx', p.x);
+    dot.setAttribute('cy', p.y);
+    dot.setAttribute('r', 3);
+    dot.setAttribute('class', 'ac-dot');
+    svg.appendChild(dot);
+  });
+
+  canvas.appendChild(svg);
+
+  var monthName = info.querySelector('.month-name');
+  var monthNums = info.querySelector('.month-nums');
+  var monthNote = info.querySelector('.month-note');
+
+  function show(i) {
+    var d = FREETOWN[i];
+    var isCurrent = i === curMonth;
+    monthName.textContent = d.full;
+    monthName.style.color = d.season === 'dry' ? '#2E7D3A' : '#0072C6';
+    monthNums.innerHTML =
+      '<span class="v rain">' + d.r + ' mm</span> rainfall<br>' +
+      '<span class="v temp">' + d.t + '°C</span> average' +
+      (isCurrent ? ' · <span style="color:#2E7D3A;font-weight:500;">now</span>' : '');
+    monthNote.textContent = d.note;
+  }
+
+  show(curMonth);
+}
+
+/* ================= ARTICLE VIEW ================= */
+var currentArticleKey = null;
+function render(key) {
+  var a = A[key]; if (!a) return;
+  currentArticleKey = key;
+  var view = document.getElementById('article-view');
+  var content = document.getElementById('art-content');
+  var partEl = document.getElementById('art-part');
+  var kicker = document.getElementById('art-kicker');
+  var titleEl = document.getElementById('art-title');
+  var metaEl = document.getElementById('art-meta');
+  var figsEl = document.getElementById('art-figs');
+  var bodyEl = document.getElementById('art-body');
+  var chartCounter = 0;
+
+  var dict = I18N[currentLang];
+  content.setAttribute('data-part', a.partKey || 'geo');
+  partEl.textContent = a.part;
+  kicker.textContent = a.part;
+  titleEl.textContent = a.title;
+  metaEl.textContent = dict.updated + ' ' + a.date;
+  figsEl.innerHTML = '';
+  bodyEl.innerHTML = '';
+
+  if (a.figs && a.figs.length) {
+    var fw = document.createElement('div');
+    fw.className = 'key-figures';
+    a.figs.forEach(function (f) {
+      var kf = document.createElement('div');
+      kf.className = 'kf ' + (f.c || 'c1');
+      var n = document.createElement('span');
+      n.className = 'n';
+      n.textContent = f.n;
+      var l = document.createElement('span');
+      l.className = 'l';
+      l.textContent = f.l;
+      kf.appendChild(n); kf.appendChild(l);
+      fw.appendChild(kf);
+    });
+    figsEl.appendChild(fw);
+  }
+
+  a.body.forEach(function (block) {
+    if (block.t === 'p') {
+      var p = document.createElement('p'); p.textContent = block.v; bodyEl.appendChild(p);
+    } else if (block.t === 'site') {
+      var n = document.createElement('p'); n.className = 'site-note';
+      n.setAttribute('data-prefix', dict.siteNote);
+      n.textContent = block.v;
+      bodyEl.appendChild(n);
+    } else if (block.t === 'chart') {
+      chartCounter++;
+      var chartId = 'art-chart-' + chartCounter;
+      var wrap = document.createElement('div');
+      wrap.className = 'art-chart';
+      wrap.id = chartId;
+      wrap.innerHTML =
+        '<div class="ac-head">' +
+          '<div>' +
+            '<div class="ac-eyebrow">Freetown · monthly climate</div>' +
+            '<div class="ac-title">Rainfall and temperature through the year</div>' +
+          '</div>' +
+          '<div class="ac-legend">' +
+            '<span class="lg"><span class="sw dry"></span>' + dict.dry + '</span>' +
+            '<span class="lg"><span class="sw wet"></span>' + dict.wet + '</span>' +
+            '<span class="lg"><span class="sw line"></span>Temp</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="ac-canvas"></div>' +
+        '<div class="ac-info">' +
+          '<div>' +
+            '<div class="month-name">—</div>' +
+            '<div class="month-nums">—</div>' +
+          '</div>' +
+          '<div class="month-note">Hover or tap a month to see what it means for construction.</div>' +
+        '</div>';
+      bodyEl.appendChild(wrap);
+      buildArticleChart(chartId);
+    } else if (block.t === 'law') {
+      var sec = document.createElement('div'); sec.className = 'statutes';
+      var h = document.createElement('h3');
+      h.innerHTML = '<span class="sym">§</span> ' + dict.stats;
+      sec.appendChild(h);
+      block.items.forEach(function (item) {
+        var d = document.createElement('div'); d.className = 'statute';
+        var act = document.createElement('div'); act.className = 'act'; act.textContent = item.act; d.appendChild(act);
+        var yr = document.createElement('div'); yr.className = 'year'; yr.textContent = item.year; d.appendChild(yr);
+        item.entries.forEach(function (e) {
+          var pr = document.createElement('div'); pr.className = 'provision';
+          var s = document.createElement('span'); s.className = 'sec'; s.textContent = e.s;
+          var v = document.createElement('span'); v.textContent = e.v;
+          pr.appendChild(s); pr.appendChild(v); d.appendChild(pr);
+        });
+        sec.appendChild(d);
+      });
+      bodyEl.appendChild(sec);
+    } else if (block.t === 'start') {
+      var sb = document.createElement('div'); sb.className = 'start-block';
+      var eb = document.createElement('span'); eb.className = 'eyebrow'; eb.textContent = block.eyebrow; sb.appendChild(eb);
+      var sp = document.createElement('p'); sp.textContent = block.text; sb.appendChild(sp);
+      var sa = document.createElement('a');
+      sa.href = 'mailto:' + block.link;
+      sa.textContent = block.linkText;
+      sb.appendChild(sa);
+      bodyEl.appendChild(sb);
+    }
+  });
+
+  view.classList.add('open');
+  view.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+}
+
+document.querySelectorAll('[data-article]').forEach(function (row) {
+  row.addEventListener('click', function (e) {
+    e.preventDefault();
+    render(row.getAttribute('data-article'));
+  });
+});
+
+(function () {
+  var view = document.getElementById('article-view');
+  var back = document.getElementById('article-back');
+  function close() {
+    view.classList.remove('open');
+    document.body.style.overflow = '';
+    currentArticleKey = null;
+  }
+  back.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && view.classList.contains('open')) close();
+  });
+})();
+
+/* Apply saved language on load */
+if (currentLang === 'kri') applyLang('kri');
+</script>
+
+</body>
+</html>
