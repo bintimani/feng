@@ -5,28 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#FBFAF7">
 
-    <title>Construction & Consulting in Sierra Leone | Konstatines</title>
-    <meta name="description" content="Construction and field operations in Sierra Leone. Consulting, data analytics, GIS mapping and real estate intelligence delivered remotely across Africa."/>
-    <meta name="robots" content="index, follow"/>
-    <link rel="canonical" href="https://fortis.sl/"/>
+    <title>Construction Company in Sierra Leone | Equipment Rental & Consulting — Konstatines</title>
+    <meta name="description" content="Construction, earthmoving, equipment rental and land services in Sierra Leone. Geospatial analysis, GIS mapping and real estate intelligence across Africa. Freetown-based, English & Krio."/>
+    <meta name="keywords" content="construction Sierra Leone, earthmoving Freetown, equipment rental Sierra Leone, land selection, geospatial analysis Africa, GIS mapping, real estate analytics, Konstatines"/>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"/>
+    <meta name="author" content="Konstatines Consulting Services Limited"/>
+    <link rel="canonical" href="https://sierraleonebuild.com/"/>
+
+    <meta name="geo.region" content="SL"/>
+    <meta name="geo.placename" content="Freetown"/>
+    <meta name="geo.position" content="8.48;-13.23"/>
+    <meta name="ICBM" content="8.48, -13.23"/>
+
+    <link rel="alternate" hreflang="en" href="https://sierraleonebuild.com/"/>
+    <link rel="alternate" hreflang="x-default" href="https://sierraleonebuild.com/"/>
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://fortis.sl/"/>
-    <meta property="og:title" content="Construction & Consulting in Sierra Leone | Konstatines"/>
-    <meta property="og:description" content="Construction in Sierra Leone. Consulting, analytics and GIS mapping across Africa."/>
-    <meta property="og:image" content="https://fortis.sl/hero.jpg"/>
+    <meta property="og:url" content="https://sierraleonebuild.com/"/>
+    <meta property="og:title" content="Construction Company in Sierra Leone | Konstatines Consulting"/>
+    <meta property="og:description" content="Construction, earthmoving, equipment rental and land services in Sierra Leone. Geospatial analysis and GIS mapping across Africa."/>
+    <meta property="og:image" content="https://sierraleonebuild.com/hero.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
     <meta property="og:image:alt" content="Construction and consulting services in Sierra Leone"/>
     <meta property="og:site_name" content="Konstatines Consulting"/>
     <meta property="og:locale" content="en_SL"/>
 
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Construction & Consulting in Sierra Leone | Konstatines"/>
-    <meta name="twitter:description" content="Construction in Sierra Leone. Consulting, analytics and GIS mapping across Africa."/>
-    <meta name="twitter:image" content="https://fortis.sl/hero.jpg"/>
+    <meta name="twitter:title" content="Construction Company in Sierra Leone | Konstatines"/>
+    <meta name="twitter:description" content="Construction, earthmoving, equipment rental and consulting across Sierra Leone and Africa."/>
+    <meta name="twitter:image" content="https://sierraleonebuild.com/hero.jpg"/>
     <meta name="twitter:image:alt" content="Construction and consulting services in Sierra Leone"/>
 
     <link rel="icon" href="/icon.jpg" type="image/jpeg"/>
     <link rel="apple-touch-icon" href="/icon.jpg"/>
+    <meta name="apple-mobile-web-app-title" content="Konstatines"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,7 +93,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Sierra Leone flag stripe */
         body::before {
             content: '';
             position: fixed;
@@ -99,7 +112,6 @@
             border-radius: 2px;
         }
 
-        /* Skip link */
         .skip-link {
             position: absolute;
             left: -9999px;
@@ -113,7 +125,6 @@
         }
         .skip-link:focus { left: 8px; top: 8px; }
 
-        /* ===== FIXED HEADER ===== */
         .site-header {
             position: fixed;
             top: 4px; left: 0;
@@ -217,7 +228,6 @@
         .ig-icon:hover { transform: scale(1.1); }
         .ig-icon svg { width: 10px; height: 10px; fill: white; }
 
-        /* ===== HERO ===== */
         .hero {
             min-height: 85vh;
             display: flex;
@@ -275,7 +285,6 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.35);
         }
 
-        /* ===== SECTIONS ===== */
         section { padding: 100px 8%; }
 
         .section-title {
@@ -296,7 +305,6 @@
             line-height: 1.65;
         }
 
-        /* ===== GRID ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
@@ -362,7 +370,6 @@
 
         .card-overlay p { font-size: 0.84rem; opacity: 0.86; line-height: 1.55; }
 
-        /* ===== KNOWLEDGE BASE STRIP ===== */
         .kb-strip {
             background: linear-gradient(135deg, var(--green-soft) 0%, var(--blue-soft) 100%);
             padding: 72px 8%;
@@ -445,9 +452,32 @@
             margin: 40px auto;
             border: 1px solid rgba(0,0,0,0.06);
             background: var(--beige);
+            position: relative;
+            overflow: hidden;
         }
 
-        /* ===== FOOTER (single row) ===== */
+        #map::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 140px;
+            height: 22px;
+            background: var(--paper);
+            z-index: 1001;
+            pointer-events: auto;
+        }
+
+        #map .leaflet-control-attribution {
+            background: transparent !important;
+            color: transparent !important;
+            font-size: 0 !important;
+        }
+        #map .leaflet-control-attribution a {
+            color: transparent !important;
+            font-size: 0 !important;
+        }
+
         footer {
             background: var(--charcoal);
             color: var(--white);
@@ -487,7 +517,6 @@
         }
         .footer-links .sep { color: rgba(255,255,255,0.2); }
 
-        /* ===== MODALS ===== */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -562,7 +591,6 @@
 
         .modal-close:hover { color: var(--charcoal); }
 
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .top-bar { padding: 6px max(4%, env(safe-area-inset-right)) 6px max(4%, env(safe-area-inset-left)); gap: 8px; }
             .top-bar-left { font-size: 0.6rem; }
@@ -591,6 +619,8 @@
             .footer-links { gap: 14px; }
 
             .modal { padding: 36px 24px; }
+
+            #map::after { width: 110px; height: 20px; }
         }
 
         @media (max-width: 420px) {
@@ -601,7 +631,6 @@
             .card { height: 340px; }
         }
 
-        /* Touch devices: no sticky hover */
         @media (hover: none) {
             .card:hover img { transform: none; }
             .hero-cta:hover,
@@ -611,9 +640,8 @@
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to content</a>
+    <a href="#main-content" class="skip-link" data-i18n="skip">Skip to content</a>
 
-    <!-- ===== FIXED HEADER ===== -->
     <div class="site-header">
         <nav class="top-bar" role="navigation" aria-label="Main navigation">
             <div class="top-bar-left">
@@ -621,7 +649,7 @@
                 <strong>Konstatines Consulting Services Limited</strong>
             </div>
             <div class="top-bar-right">
-                <a href="/knowledge/sierra-leone" class="kb-link">Knowledge Base</a>
+                <a href="/knowledge/sierra-leone" class="kb-link" data-i18n="kbLink">Knowledge Base</a>
                 <div class="lang-toggle" role="group" aria-label="Language selector">
                     <span class="active" data-lang="en" aria-label="English">EN</span>
                     <span data-lang="kri" aria-label="Krio">KRI</span>
@@ -633,154 +661,127 @@
         </nav>
     </div>
 
-    <!-- ===== HERO ===== -->
     <header class="hero" role="banner">
         <div class="hero-content">
-            <h1 class="hero-slogan">
-                Building <span class="accent">Sierra Leone's</span> Future
-            </h1>
-            <p class="hero-sub">
+            <h1 class="hero-slogan" data-i18n="heroSlogan" data-i18n-html>Building <span class="accent">Sierra Leone's</span> Future</h1>
+            <p class="hero-sub" data-i18n="heroSub">
                 Construction, land and equipment services across Sierra Leone — and consulting, analytics and mapping delivered remotely to clients throughout Africa.
             </p>
             <a href="mailto:kt@krent.sl?subject=Project%20Inquiry" class="hero-cta">
-                <span aria-hidden="true">✉</span> Send an Email
+                <span aria-hidden="true">✉</span> <span data-i18n="heroCta">Send an Email</span>
             </a>
         </div>
     </header>
 
     <main id="main-content">
 
-        <!-- ===== SERVICES ===== -->
         <section class="works" id="works" aria-labelledby="services-heading">
-            <h2 class="section-title" id="services-heading">Services</h2>
-            <p class="section-lead">
+            <h2 class="section-title" id="services-heading" data-i18n="servicesTitle">Services</h2>
+            <p class="section-lead" data-i18n="servicesLead">
                 Consulting and analytics delivered remotely across Africa. Construction, land and equipment operations on the ground in Sierra Leone.
             </p>
 
             <div class="grid">
 
                 <div class="card" data-region="africa">
-                    <img src="data.jpg" alt="Data analysis and visualisation services across Africa" loading="lazy" decoding="async" width="400" height="430">
+                    <img src="gis.jpg" alt="Geospatial analysis and GIS mapping with real estate intelligence across Africa" loading="lazy" decoding="async" width="400" height="430">
                     <div class="card-overlay">
-                        <span class="card-geo">Across Africa</span>
-                        <h3>Data Analysis & Visualisation</h3>
-                        <p>Turning raw project, market and geospatial datasets into clear, decision-ready insight — dashboards, charts and summary reporting.</p>
-                    </div>
-                </div>
-
-                <div class="card" data-region="africa">
-                    <img src="gis.jpg" alt="Cartography and GIS mapping services across Africa" loading="lazy" decoding="async" width="400" height="430">
-                    <div class="card-overlay">
-                        <span class="card-geo">Across Africa</span>
-                        <h3>Cartography & GIS Mapping</h3>
-                        <p>Custom maps, boundary verification, topographic visualisation and location intelligence built from verified sources.</p>
-                    </div>
-                </div>
-
-                <div class="card" data-region="africa">
-                    <img src="realestate.jpg" alt="Real estate analytics and market intelligence across Africa" loading="lazy" decoding="async" width="400" height="430">
-                    <div class="card-overlay">
-                        <span class="card-geo">Across Africa</span>
-                        <h3>Real Estate Analytics</h3>
-                        <p>Price trends, comparable analysis, rental yield modelling and neighbourhood-level market intelligence for investors and developers.</p>
+                        <span class="card-geo" data-i18n="geoAfrica">Across Africa</span>
+                        <h3 data-i18n="svcGeo">Geospatial Analysis</h3>
+                        <p data-i18n="svcGeoDesc">Data analytics, cartography, GIS mapping and real estate intelligence — turning location, market and spatial datasets into clear, decision-ready insight for investors and developers.</p>
                     </div>
                 </div>
 
                 <div class="card" data-region="sl">
                     <img src="land.jpg" alt="Land acquisition and site selection services in Sierra Leone" loading="lazy" decoding="async" width="400" height="430">
                     <div class="card-overlay">
-                        <span class="card-geo">Sierra Leone</span>
-                        <h3>Land Selection</h3>
-                        <p>Independent site verification, title due diligence and structured acquisition support across Sierra Leone.</p>
+                        <span class="card-geo" data-i18n="geoSl">Sierra Leone</span>
+                        <h3 data-i18n="svcLand">Land Selection</h3>
+                        <p data-i18n="svcLandDesc">Independent site verification, title due diligence and structured acquisition support across Sierra Leone.</p>
                     </div>
                 </div>
 
                 <div class="card" data-region="sl">
                     <img src="wood.jpg" alt="Premium material selection for construction projects" loading="lazy" decoding="async" width="400" height="430">
                     <div class="card-overlay">
-                        <span class="card-geo">Sierra Leone</span>
-                        <h3>Selection of Materials</h3>
-                        <p>Sourcing, specification and procurement of structural, finishing and specialty materials from vetted suppliers.</p>
+                        <span class="card-geo" data-i18n="geoSl">Sierra Leone</span>
+                        <h3 data-i18n="svcMat">Selection of Materials</h3>
+                        <p data-i18n="svcMatDesc">Sourcing, specification and procurement of structural, finishing and specialty materials from vetted suppliers.</p>
                     </div>
                 </div>
 
                 <div class="card" data-region="sl">
                     <img src="earthmoving.jpg" alt="Heavy earthmoving and excavation services Freetown" loading="lazy" decoding="async" width="400" height="430">
                     <div class="card-overlay">
-                        <span class="card-geo">Sierra Leone</span>
-                        <h3>Earthmoving</h3>
-                        <p>Bulk excavation, grading, trenching and full site preparation using modern heavy plant and experienced operators.</p>
+                        <span class="card-geo" data-i18n="geoSl">Sierra Leone</span>
+                        <h3 data-i18n="svcEarth">Earthmoving</h3>
+                        <p data-i18n="svcEarthDesc">Bulk excavation, grading, trenching and full site preparation using modern heavy plant and experienced operators.</p>
                     </div>
                 </div>
 
                 <div class="card" data-region="sl">
                     <img src="concrete.jpg" alt="Concrete reinforcement and structural engineering Sierra Leone" loading="lazy" decoding="async" width="400" height="430">
                     <div class="card-overlay">
-                        <span class="card-geo">Sierra Leone</span>
-                        <h3>Concrete & Reinforcement</h3>
-                        <p>Reinforced concrete structures, foundations, slabs and quality-controlled pours with documented mix design.</p>
+                        <span class="card-geo" data-i18n="geoSl">Sierra Leone</span>
+                        <h3 data-i18n="svcConc">Concrete & Reinforcement</h3>
+                        <p data-i18n="svcConcDesc">Reinforced concrete structures, foundations, slabs and quality-controlled pours with documented mix design.</p>
                     </div>
                 </div>
 
                 <div class="card" data-region="sl">
                     <img src="b2.jpg" alt="Technical equipment advisory and machinery consulting" loading="lazy" decoding="async" width="400" height="430">
                     <div class="card-overlay">
-                        <span class="card-geo">Sierra Leone</span>
-                        <h3>Selection of Equipment</h3>
-                        <p>Impartial specification and sourcing of plant and machinery matched to project scope, terrain and budget.</p>
+                        <span class="card-geo" data-i18n="geoSl">Sierra Leone</span>
+                        <h3 data-i18n="svcEquip">Selection of Equipment</h3>
+                        <p data-i18n="svcEquipDesc">Impartial specification and sourcing of plant and machinery matched to project scope, terrain and budget.</p>
                     </div>
                 </div>
 
                 <div class="card" data-region="sl">
                     <img src="exc2.jpg" alt="Heavy machinery rental solutions for construction projects" loading="lazy" decoding="async" width="400" height="430">
                     <div class="card-overlay">
-                        <span class="card-geo">Sierra Leone</span>
-                        <h3>Rental of Equipment</h3>
-                        <p>Flexible short- and long-term hire of excavators, loaders, mixers and support plant, with operators on request.</p>
+                        <span class="card-geo" data-i18n="geoSl">Sierra Leone</span>
+                        <h3 data-i18n="svcRent">Rental of Equipment</h3>
+                        <p data-i18n="svcRentDesc">Flexible short- and long-term hire of excavators, loaders, mixers and support plant, with operators on request.</p>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- ===== KNOWLEDGE BASE STRIP ===== -->
         <section class="kb-strip" aria-labelledby="kb-heading">
             <div class="kb-strip-inner">
-                <p class="kb-strip-label">Knowledge Base</p>
-                <h2 id="kb-heading">A reference on Sierra Leone</h2>
-                <p class="kb-strip-desc">
+                <p class="kb-strip-label" data-i18n="kbLabel">Knowledge Base</p>
+                <h2 id="kb-heading" data-i18n="kbTitle">A reference on Sierra Leone</h2>
+                <p class="kb-strip-desc" data-i18n="kbDesc">
                     Fourteen articles on the land, climate, people, economy and the laws that govern ownership and investment — written for buyers, builders and investors.
                 </p>
-                <a href="/knowledge/sierra-leone" class="kb-strip-cta">
-                    Open the Knowledge Base →
-                </a>
+                <a href="/knowledge/sierra-leone" class="kb-strip-cta" data-i18n="kbCta">Open the Knowledge Base →</a>
             </div>
         </section>
 
-        <!-- ===== MAP ===== -->
         <div id="map" aria-label="Map of Freetown, Sierra Leone"></div>
 
     </main>
 
-    <!-- ===== FOOTER (single row) ===== -->
     <footer role="contentinfo">
         <div class="footer-bar">
             <span class="footer-copy">
                 &copy; <span id="year"></span> Konstatines Consulting Services Limited
             </span>
             <div class="footer-links">
-                <a href="/knowledge/sierra-leone" class="kb-footer">Knowledge Base</a>
+                <a href="/knowledge/sierra-leone" class="kb-footer" data-i18n="kbLink">Knowledge Base</a>
                 <span class="sep">·</span>
                 <a href="mailto:kt@krent.sl"><span aria-hidden="true">✉</span> kt@krent.sl</a>
                 <span class="sep">·</span>
-                <a href="#" id="terms-link">Terms of Use</a>
+                <a href="#" id="terms-link" data-i18n="terms">Terms of Use</a>
                 <span class="sep">·</span>
-                <a href="#" id="privacy-link">Privacy Policy</a>
+                <a href="#" id="privacy-link" data-i18n="privacy">Privacy Policy</a>
             </div>
         </div>
     </footer>
 
-    <!-- ===== TERMS MODAL ===== -->
+    <!-- ============ TERMS MODAL ============ -->
     <div class="modal-overlay" id="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-title">
         <div class="modal">
             <button class="modal-close" aria-label="Close">&times;</button>
@@ -828,7 +829,7 @@
         </div>
     </div>
 
-    <!-- ===== PRIVACY MODAL ===== -->
+    <!-- ============ PRIVACY MODAL ============ -->
     <div class="modal-overlay" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
         <div class="modal">
             <button class="modal-close" aria-label="Close">&times;</button>
@@ -899,20 +900,20 @@
         </div>
     </div>
 
-    <!-- ===== JSON-LD SCHEMA ===== -->
+    <!-- ============ JSON-LD SCHEMA ============ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://fortis.sl/#org",
+          "@id": "https://sierraleonebuild.com/#org",
           "name": "Konstatines Consulting Services Limited",
           "legalName": "Konstatines Consulting Services Limited",
-          "image": "https://fortis.sl/hero.jpg",
-          "logo": "https://fortis.sl/icon.jpg",
+          "image": "https://sierraleonebuild.com/hero.jpg",
+          "logo": "https://sierraleonebuild.com/icon.jpg",
           "email": "kt@krent.sl",
-          "url": "https://fortis.sl",
+          "url": "https://sierraleonebuild.com",
           "sameAs": ["https://instagram.com/sierraleonebuild"],
           "address": {
             "@type": "PostalAddress",
@@ -922,20 +923,20 @@
         },
         {
           "@type": "WebSite",
-          "@id": "https://fortis.sl/#website",
-          "url": "https://fortis.sl/",
+          "@id": "https://sierraleonebuild.com/#website",
+          "url": "https://sierraleonebuild.com/",
           "name": "Konstatines Consulting",
-          "publisher": { "@id": "https://fortis.sl/#org" },
+          "publisher": { "@id": "https://sierraleonebuild.com/#org" },
           "inLanguage": "en"
         },
         {
           "@type": "ProfessionalService",
-          "@id": "https://fortis.sl/#business",
+          "@id": "https://sierraleonebuild.com/#business",
           "name": "Konstatines Consulting Services Limited",
-          "parentOrganization": { "@id": "https://fortis.sl/#org" },
-          "image": "https://fortis.sl/hero.jpg",
+          "parentOrganization": { "@id": "https://sierraleonebuild.com/#org" },
+          "image": "https://sierraleonebuild.com/hero.jpg",
           "email": "kt@krent.sl",
-          "url": "https://fortis.sl",
+          "url": "https://sierraleonebuild.com",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Freetown",
@@ -943,6 +944,7 @@
           },
           "geo": { "@type": "GeoCoordinates", "latitude": 8.48, "longitude": -13.23 },
           "knowsAbout": [
+            "Geospatial analysis",
             "Data analytics",
             "GIS mapping",
             "Cartography",
@@ -953,9 +955,7 @@
             "@type": "OfferCatalog",
             "name": "Consulting & Construction Services",
             "itemListElement": [
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Data Analysis & Visualisation", "areaServed": {"@type": "Place", "name": "Africa"}}},
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cartography & GIS Mapping", "areaServed": {"@type": "Place", "name": "Africa"}}},
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Real Estate Analytics", "areaServed": {"@type": "Place", "name": "Africa"}}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Geospatial Analysis", "areaServed": {"@type": "Place", "name": "Africa"}}},
               {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Land Selection", "areaServed": {"@type": "Country", "name": "Sierra Leone"}}},
               {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Selection of Materials", "areaServed": {"@type": "Country", "name": "Sierra Leone"}}},
               {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Earthmoving", "areaServed": {"@type": "Country", "name": "Sierra Leone"}}},
@@ -970,6 +970,52 @@
           ],
           "priceRange": "$$$",
           "availableLanguage": ["English", "Krio"]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://sierraleonebuild.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What services does Konstatines offer in Sierra Leone?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Konstatines provides construction services, earthmoving, equipment rental, land selection and material sourcing in Sierra Leone. Geospatial analysis, data analytics, GIS mapping and real estate intelligence are delivered remotely across Africa."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is Konstatines Consulting based?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Konstatines Consulting Services Limited is based in Freetown, Sierra Leone, and works with clients throughout Africa."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Konstatines work outside Sierra Leone?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Geospatial analysis, data analytics, GIS mapping, cartography and real estate analytics are delivered remotely to clients throughout Africa."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What equipment can be rented from Konstatines?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Excavators, loaders, mixers and support plant are available for short- and long-term hire, with experienced operators on request."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I contact Konstatines?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Email kt@krent.sl for project enquiries, partnership and consulting requests."
+              }
+            }
+          ]
         }
       ]
     }
@@ -981,10 +1027,113 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        /* ===================== I18N ===================== */
+        var I18N = {
+            en: {
+                skip: 'Skip to content',
+                kbLink: 'Knowledge Base',
+                heroSlogan: 'Building <span class="accent">Sierra Leone\'s</span> Future',
+                heroSub: 'Construction, land and equipment services across Sierra Leone — and consulting, analytics and mapping delivered remotely to clients throughout Africa.',
+                heroCta: 'Send an Email',
+                servicesTitle: 'Services',
+                servicesLead: 'Consulting and analytics delivered remotely across Africa. Construction, land and equipment operations on the ground in Sierra Leone.',
+                geoAfrica: 'Across Africa',
+                geoSl: 'Sierra Leone',
+                svcGeo: 'Geospatial Analysis',
+                svcGeoDesc: 'Data analytics, cartography, GIS mapping and real estate intelligence — turning location, market and spatial datasets into clear, decision-ready insight for investors and developers.',
+                svcLand: 'Land Selection',
+                svcLandDesc: 'Independent site verification, title due diligence and structured acquisition support across Sierra Leone.',
+                svcMat: 'Selection of Materials',
+                svcMatDesc: 'Sourcing, specification and procurement of structural, finishing and specialty materials from vetted suppliers.',
+                svcEarth: 'Earthmoving',
+                svcEarthDesc: 'Bulk excavation, grading, trenching and full site preparation using modern heavy plant and experienced operators.',
+                svcConc: 'Concrete & Reinforcement',
+                svcConcDesc: 'Reinforced concrete structures, foundations, slabs and quality-controlled pours with documented mix design.',
+                svcEquip: 'Selection of Equipment',
+                svcEquipDesc: 'Impartial specification and sourcing of plant and machinery matched to project scope, terrain and budget.',
+                svcRent: 'Rental of Equipment',
+                svcRentDesc: 'Flexible short- and long-term hire of excavators, loaders, mixers and support plant, with operators on request.',
+                kbLabel: 'Knowledge Base',
+                kbTitle: 'A reference on Sierra Leone',
+                kbDesc: 'Fourteen articles on the land, climate, people, economy and the laws that govern ownership and investment — written for buyers, builders and investors.',
+                kbCta: 'Open the Knowledge Base →',
+                terms: 'Terms of Use',
+                privacy: 'Privacy Policy'
+            },
+            kri: {
+                skip: 'Go to di kɔntɛnt',
+                kbLink: 'Nɔlij Bɛs',
+                heroSlogan: 'Wi de Bil <span class="accent">Sierra Leone</span> In Fyuchɔ',
+                heroSub: 'Kɔnstrɔkshɔn, land ɛn ɛkwipmɛnt sɛvis dɛn na ɔl Sierra Leone — ɛn kɔnsɔltin, analytics ɛn mapin we wi de du rimoht fɔ kliɛnt dɛn na ɔl Afrika.',
+                heroCta: 'Sɛn Imel',
+                servicesTitle: 'Sɛvis dɛn',
+                servicesLead: 'Wi de du kɔnsɔltin ɛn analytics rimoht fɔ kliɛnt dɛn na ɔl Afrika. Kɔnstrɔkshɔn, land ɛn ɛkwipmɛnt wok na grɔn na Sierra Leone.',
+                geoAfrica: 'Na Ɔl Afrika',
+                geoSl: 'Sierra Leone',
+                svcGeo: 'Jiospeshal Analisis',
+                svcGeoDesc: 'Data analytics, katografi, GIS mapin ɛn rial ɛstet intɛlijɛns — fɔ ton lokeshɔn, market ɛn jiospeshal datasets insay klia, rɛdi fɔ disizhɔn insayt fɔ invɛstɔ dɛn ɛn divɛlɔpɔ dɛn.',
+                svcLand: 'Land Silɛkshɔn',
+                svcLandDesc: 'Indipɛndɛnt sayt vɛrifikeshɔn, tait dyu dilijɛns ɛn strɔkchɔd akwizishɔn sɔpɔt na ɔl Sierra Leone.',
+                svcMat: 'Silɛkshɔn ɔf Matirial dɛn',
+                svcMatDesc: 'Sɔsin, spɛsifikeshɔn ɛn prɔkyuɔmɛnt ɔf strɔkchɔral, finishin ɛn spɛshalti matirial dɛn frɔm vɛtɛd sɔplaiya dɛn.',
+                svcEarth: 'Ɛtmuvin',
+                svcEarthDesc: 'Bɔlk ɛkskaveshɔn, gredin, trɛnchin ɛn ful sayt pripereshɔn we wi de yuz mɔdɛn hɛvi plant ɛn ɛkspiriɛns opɛreta dɛn.',
+                svcConc: 'Kɔnkrit & Rienfɔsmɛnt',
+                svcConcDesc: 'Rienfɔsd kɔnkrit strɔkchɔ dɛn, faundeshɔn dɛn, slabs ɛn kwaliti-kɔntrold pɔ dɛn wit dɔkyumɛntɛd miks dizayn.',
+                svcEquip: 'Silɛkshɔn ɔf Ɛkwipmɛnt',
+                svcEquipDesc: 'Impartial spɛsifikeshɔn ɛn sɔsin ɔf plant ɛn mashinɛri we dɛn mach wit prɔjɛkt skop, tɛren ɛn bɔjɛt.',
+                svcRent: 'Rɛntal ɔf Ɛkwipmɛnt',
+                svcRentDesc: 'Flɛksibl shɔt- ɛn lɔng-tɛm hai ɔf ɛkskaveta dɛn, loda dɛn, miksa dɛn ɛn sɔpɔt plant, wit opɛreta dɛn pan rikwɛst.',
+                kbLabel: 'Nɔlij Bɛs',
+                kbTitle: 'Wan refrɛns pan Sierra Leone',
+                kbDesc: 'Fɔtin atikul dɛn pan di land, klaymet, pipul dɛn, ɛkɔnɔmi ɛn di lɔ dɛn we de gɛvɛn ɔnɛship ɛn invɛstmɛnt — we dɛn rayt fɔ baya dɛn, bilda dɛn ɛn invɛstɔ dɛn.',
+                kbCta: 'Opin di Nɔlij Bɛs →',
+                terms: 'Tɛm dɛn ɔf Yuz',
+                privacy: 'Praivasi Pɔlisi'
+            }
+        };
+
+        function applyLang(lang) {
+            var dict = I18N[lang] || I18N.en;
+
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                if (dict[key] == null) return;
+                if (el.hasAttribute('data-i18n-html')) {
+                    el.innerHTML = dict[key];
+                } else {
+                    el.textContent = dict[key];
+                }
+            });
+
+            document.documentElement.lang = (lang === 'kri') ? 'kri' : 'en';
+
+            document.querySelectorAll('.lang-toggle span').forEach(function (s) {
+                s.classList.toggle('active', s.getAttribute('data-lang') === lang);
+            });
+
+            try { localStorage.setItem('site-lang', lang); } catch (e) {}
+        }
+
+        document.querySelectorAll('.lang-toggle span').forEach(function (span) {
+            span.addEventListener('click', function () {
+                var lang = span.getAttribute('data-lang');
+                if (lang) applyLang(lang);
+            });
+        });
+
+        (function () {
+            var saved = 'en';
+            try { saved = localStorage.getItem('site-lang') || 'en'; } catch (e) {}
+            if (saved === 'kri') applyLang('kri');
+        })();
+
+        /* ===================== MODALS ===================== */
         function setupModal(linkId, modalId) {
-            const link = document.getElementById(linkId);
-            const modal = document.getElementById(modalId);
-            const closeBtn = modal.querySelector('.modal-close');
+            var link = document.getElementById(linkId);
+            var modal = document.getElementById(modalId);
+            if (!link || !modal) return;
+            var closeBtn = modal.querySelector('.modal-close');
 
             link.addEventListener('click', function(e) { e.preventDefault(); modal.classList.add('active'); });
             closeBtn.addEventListener('click', function() { modal.classList.remove('active'); });
@@ -996,14 +1145,7 @@
         setupModal('terms-link', 'terms-modal');
         setupModal('privacy-link', 'privacy-modal');
 
-        const langSpans = document.querySelectorAll('.lang-toggle span');
-        langSpans.forEach(function(span) {
-            span.addEventListener('click', function() {
-                langSpans.forEach(function(s) { s.classList.remove('active'); });
-                span.classList.add('active');
-            });
-        });
-
+        /* ===================== MAP ===================== */
         (function() {
             var mapInitialized = false;
             var mapContainer = document.getElementById('map');
