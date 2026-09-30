@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sierraleonebuild.com/sitemap.xml
