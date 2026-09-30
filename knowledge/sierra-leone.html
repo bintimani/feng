@@ -4,15 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#FBFAF7">
-<title>Sierra Leone — Country Profile</title>
-<meta name="description" content="A reference on Sierra Leone: geography, climate, people, economy and the laws that govern land and investment.">
+<title>Sierra Leone — Country Profile | Geography, Climate, People, Economy & Law</title>
+<meta name="description" content="A reference on Sierra Leone: geography, climate, people, economy, and the laws that govern land ownership and foreign investment. Includes statutes, figures, and practical site notes.">
 <meta name="robots" content="index, follow">
+<meta name="author" content="Konstatines Consulting Services Limited">
+<meta name="keywords" content="Sierra Leone, country profile, land law, foreign ownership, Freetown, climate, economy, investment, Companies Act, Customary Land Rights Act">
 <link rel="canonical" href="https://fortis.sl/knowledge/sierra-leone">
 <link rel="icon" href="/icon.jpg" type="image/jpeg">
 
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sierra Leone — Country Profile">
-<meta property="og:description" content="A reference on the land, climate, people, economy and the laws that govern ownership and investment.">
+<meta property="og:description" content="Land, climate, people, economy and the laws that govern ownership and investment.">
 <meta property="og:url" content="https://fortis.sl/knowledge/sierra-leone">
 <meta property="og:image" content="https://fortis.sl/hero.jpg">
 <meta property="og:image:alt" content="Sierra Leone country reference">
@@ -27,6 +29,36 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&family=Work+Sans:wght@500;600&family=Manrope:wght@500;600&family=IBM+Plex+Sans:wght@500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Sierra Leone — Country Profile",
+  "description": "A reference on the land, climate, people, economy, and the laws that govern ownership and investment in Sierra Leone.",
+  "author": {
+    "@type": "Organization",
+    "name": "Konstatines Consulting Services Limited"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Konstatines Consulting Services Limited"
+  },
+  "dateModified": "2026-09-30",
+  "about": {
+    "@type": "Place",
+    "name": "Sierra Leone",
+    "containedInPlace": {
+      "@type": "Continent",
+      "name": "Africa"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fortis.sl/knowledge/sierra-leone"
+  }
+}
+</script>
 
 <style>
 :root {
@@ -334,6 +366,7 @@ h1 {
   color: var(--ink);
   text-decoration: none;
   transition: background 0.15s ease;
+  cursor: pointer;
 }
 .articles a::before {
   counter-increment: art;
@@ -450,6 +483,7 @@ footer .sep { margin: 0 8px; color: var(--faint); }
   z-index: 1000;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 .article-view.open { display: block; }
 .article-bar {
@@ -566,36 +600,39 @@ footer .sep { margin: 0 8px; color: var(--faint); }
   line-height: 1.4;
 }
 
-.article-content p {
+/* Fixed: scoped to #art-body to avoid cascade bug */
+#art-body > p {
   font-family: var(--sans);
   font-size: 1.02rem;
   line-height: 1.75;
   color: var(--ink-soft);
   margin-bottom: 22px;
 }
-.article-content p:first-of-type {
+#art-body > p:first-of-type {
   font-size: 1.12rem;
   line-height: 1.65;
   color: var(--ink);
   padding-left: 16px;
   border-left: 3px solid var(--part-accent, var(--green));
 }
+#art-body > p.site-note {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin: 28px 0;
+}
 
 .site-note {
   display: none;
-  margin: 28px 0;
   padding: 16px 18px 16px 20px;
   background: var(--green-tint);
   border-left: 3px solid var(--green);
   border-radius: 0 3px 3px 0;
   font-family: var(--sans);
-  font-size: 0.98rem;
-  line-height: 1.65;
   color: var(--ink-soft);
   font-style: italic;
 }
 .site-note::before {
-  content: '● Site note';
+  content: attr(data-prefix);
   display: block;
   font-family: var(--mono);
   font-style: normal;
@@ -934,8 +971,8 @@ body.show-notes .statutes { display: block; }
   .article-content { padding: 0 20px 80px; }
   .article-content::before { left: 20px; width: 36px; }
   .article-content .kicker { margin: 32px 0 20px; }
-  .article-content p { font-size: 0.98rem; line-height: 1.7; }
-  .article-content p:first-of-type { font-size: 1.05rem; }
+  #art-body > p { font-size: 0.98rem; line-height: 1.7; }
+  #art-body > p:first-of-type { font-size: 1.05rem; }
   .key-figures { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
   .kf { padding: 14px 13px 12px; }
   .kf .n { font-size: 1.35rem; }
@@ -971,7 +1008,15 @@ body.show-notes .statutes { display: block; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
-  html { scroll-behavior: auto; }
+}
+
+/* Print styles */
+@media print {
+  body::before, .top, .article-bar, .read-mode, .start-block a { display: none !important; }
+  .article-view { position: static; overflow: visible; }
+  .article-view.open { display: block; }
+  .site-note, .statutes { display: block !important; }
+  .articles a { cursor: default; }
 }
 </style>
 </head>
@@ -1066,19 +1111,19 @@ body.show-notes .statutes { display: block; }
       <span class="part-meta" data-i18n="metaFour">4 articles</span>
     </header>
     <ol class="articles">
-      <li><a data-article="where">
+      <li><a href="#where" data-article="where">
         <span class="article-title" data-i18n="artWhere">Where is Sierra Leone?</span>
         <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
-      <li><a data-article="peninsula">
+      <li><a href="#peninsula" data-article="peninsula">
         <span class="article-title" data-i18n="artPeninsula">The Freetown Peninsula</span>
         <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
-      <li><a data-article="regions">
+      <li><a href="#regions" data-article="regions">
         <span class="article-title" data-i18n="artRegions">Regions, Districts and Terrain</span>
         <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
-      <li><a data-article="rivers">
+      <li><a href="#rivers" data-article="rivers">
         <span class="article-title" data-i18n="artRivers">Rivers and Estuaries</span>
         <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
@@ -1092,19 +1137,19 @@ body.show-notes .statutes { display: block; }
       <span class="part-meta" data-i18n="metaFour">4 articles</span>
     </header>
     <ol class="articles">
-      <li><a data-article="seasons">
+      <li><a href="#seasons" data-article="seasons">
         <span class="article-title" data-i18n="artSeasons">The Two Seasons</span>
         <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
-      <li><a data-article="rainfall">
+      <li><a href="#rainfall" data-article="rainfall">
         <span class="article-title" data-i18n="artRainfall">Rainfall and the Building Calendar</span>
         <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
-      <li><a data-article="humidity">
+      <li><a href="#humidity" data-article="humidity">
         <span class="article-title" data-i18n="artHumidity">Humidity, Salt Air and Materials</span>
         <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
-      <li><a data-article="permits">
+      <li><a href="#permits" data-article="permits">
         <span class="article-title" data-i18n="artPermits">Building Permits and Site Preparation</span>
         <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
@@ -1118,11 +1163,11 @@ body.show-notes .statutes { display: block; }
       <span class="part-meta" data-i18n="metaTwo">2 articles</span>
     </header>
     <ol class="articles">
-      <li><a data-article="population">
+      <li><a href="#population" data-article="population">
         <span class="article-title" data-i18n="artPopulation">Population and Distribution</span>
         <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
-      <li><a data-article="growth">
+      <li><a href="#growth" data-article="growth">
         <span class="article-title" data-i18n="artGrowth">Freetown's Growth and Land Pressure</span>
         <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
@@ -1136,19 +1181,19 @@ body.show-notes .statutes { display: block; }
       <span class="part-meta" data-i18n="metaFour">4 articles</span>
     </header>
     <ol class="articles">
-      <li><a data-article="leone">
+      <li><a href="#leone" data-article="leone">
         <span class="article-title" data-i18n="artLeone">The Leone, Inflation and Foreign Exchange</span>
         <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
-      <li><a data-article="sectors">
+      <li><a href="#sectors" data-article="sectors">
         <span class="article-title" data-i18n="artSectors">Key Sectors and Growth</span>
         <span class="chips"><span class="chip data" data-i18n="chipData">data</span><span class="chip site"><span class="sym">●</span><span data-i18n="chipSite">site</span></span></span>
       </a></li>
-      <li class="flagged"><a data-article="company">
+      <li class="flagged"><a href="#company" data-article="company">
         <span class="article-title" data-i18n="artCompany">Registering a Company</span>
         <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip start"><span class="sym">★</span><span data-i18n="chipStart">start here</span></span></span>
       </a></li>
-      <li class="flagged"><a data-article="ownership">
+      <li class="flagged"><a href="#ownership" data-article="ownership">
         <span class="article-title" data-i18n="artOwnership">Foreign Ownership and Land Law</span>
         <span class="chips"><span class="chip law"><span class="sym">§</span><span data-i18n="chipLaw">law</span></span><span class="chip data" data-i18n="chipData">data</span><span class="chip start"><span class="sym">★</span><span data-i18n="chipStart">start here</span></span></span>
       </a></li>
@@ -1243,7 +1288,8 @@ var I18N = {
     rmNotes: 'with site notes and statutes',
     updated: 'Updated',
     stats: 'Statutes',
-    siteNote: '● Site note'
+    siteNote: '● Site note',
+    kriNote: 'This article is available in full in English. Krio summary coming soon.'
   },
   kri: {
     backIndex: '← Bak',
@@ -1293,7 +1339,8 @@ var I18N = {
     rmNotes: 'wit sayt not dɛn ɛn statut dɛn',
     updated: 'Ɔpdat',
     stats: 'Statut dɛn',
-    siteNote: '● Sayt not'
+    siteNote: '● Sayt not',
+    kriNote: 'Dis atikul de ɔl na Iŋglis. Krio sɔmri de kam.'
   }
 };
 
@@ -1315,7 +1362,11 @@ function applyLang(lang) {
   document.getElementById('lang-kri').setAttribute('aria-pressed', String(lang === 'kri'));
   document.documentElement.lang = lang === 'kri' ? 'kri' : 'en';
   renderSeasonText();
-  if (currentArticleKey) render(currentArticleKey);
+  if (currentArticleKey) {
+    var savedScroll = document.getElementById('article-view').scrollTop;
+    render(currentArticleKey);
+    document.getElementById('article-view').scrollTop = savedScroll;
+  }
   try { localStorage.setItem('kb-lang', lang); } catch (e) {}
 }
 
@@ -1403,22 +1454,22 @@ var A = {
     part: 'Country · Geography', partKey: 'geo',
     title: 'The Freetown Peninsula', date: 'September 2026',
     figs: [
-      {n:'884 m', l:'Peninsula ridge peak', c:'c1'},
-      {n:'1.4 M', l:'Freetown population', c:'c2'},
-      {n:'3 ports', l:'Atlantic access', c:'c3'}
+      {n:'888 m', l:'Peninsula peak (Picket Hill)', c:'c1'},
+      {n:'1.9 M', l:'Freetown agglomeration', c:'c2'},
+      {n:'1.05 M', l:'City population (2015)', c:'c3'}
     ],
     body: [
-      {t:'p', v:'Freetown sits on a mountainous peninsula that rises directly from the Atlantic and curves around one of the largest natural harbours in West Africa. The peninsula\'s ridge peaks at 884 metres at Mount Aureol. Steep slopes drop to narrow coastal strips, and the harbour itself is deep enough to accommodate large vessels.'},
+      {t:'p', v:'Freetown sits on a mountainous peninsula that rises directly from the Atlantic and curves around one of the largest natural harbours in West Africa. The peninsula\'s highest point is Picket Hill at 888 metres, in the Lion Mountains. Steep slopes drop to narrow coastal strips, and the harbour itself is deep enough to accommodate large vessels.'},
       {t:'p', v:'The city\'s shape is not a design decision. It is what the terrain permitted. Settlement clings to the shoreline and the flatter land because the interior ridge is difficult to cross. Access roads follow the coast, which is why traffic concentrates on a small number of arteries: the main peninsula road, Regent Road, and the mountain cutoff.'},
       {t:'p', v:'The harbour was the original reason for the settlement — it is one of the deepest and most sheltered natural harbours on the West African coast. That geography still shapes the city: the port, the industrial area, and the main commercial district all cluster around the waterfront.'},
       {t:'site', v:'Steep lots are common and rarely obvious from the road. Cut-and-fill is often required, and retaining structures are not a luxury — they are structure. Budget the earthworks before you commit to the view.'},
       {t:'site', v:'A plot five minutes from the main road can take forty minutes in the wet season if the access track is unpaved. Check the road condition in July, not January.'},
       {t:'law', items: [
-        {act: 'Town and Country Planning Act', year: 'Cap. 81, 1979; amended 2001',
+        {act: 'National Country Planning Act', year: '2025',
          entries: [
-           {s:'Section 3', v:'Establishes the Town and Country Planning Board as the authority for town and country planning.'},
-           {s:'1999', v:'The whole of Sierra Leone was declared a planning area, so planning control applies nationwide.'},
-           {s:'2025', v:'The National Country Planning Act 2025 replaces the 1946 legislation, modernising spatial planning, zoning, development control and disaster-risk reduction.'}
+           {s:'Purpose', v:'Replaces the 1946 Town and Country Planning Act. Introduces national physical planning policies prioritising disaster risk reduction, climate adaptation and public participation.'},
+           {s:'Scope', v:'Covers all of Sierra Leone. The Act establishes a modern national framework for physical planning in both urban and rural areas.'},
+           {s:'Enforcement', v:'Includes provisions for ongoing monitoring and evaluation to ensure alignment with national development goals.'}
          ]}
       ]}
     ]
@@ -1535,11 +1586,11 @@ var A = {
     figs: [
       {n:'9.3 M', l:'Total population', c:'c1'},
       {n:'42%', l:'Under 15', c:'c2'},
-      {n:'62%', l:'Rural population', c:'c3'}
+      {n:'54%', l:'Rural population', c:'c3'}
     ],
     body: [
-      {t:'p', v:'Sierra Leone\'s population is approximately 9.3 million. The country is moderately urbanised, with 62% of people living outside the cities. The population is young: 42% are under 15.'},
-      {t:'p', v:'Freetown is by far the largest city, with a population of about 1.4 million. Other significant cities include Bo (174,354), Kenema (143,137), Koidu (88,000), Makeni (87,679) and Lunsar (22,461).'},
+      {t:'p', v:'Sierra Leone\'s population is approximately 9.3 million. The country is moderately urbanised, with approximately 46% of people living in urban areas and 54% in rural areas. The population is young: 42% are under 15.'},
+      {t:'p', v:'Freetown is by far the largest city, with a population of about 1.05 million (2015 census). The wider Freetown urban agglomeration — which includes surrounding settlements on the peninsula — had an estimated population of approximately 1.9 million in 2025. Other significant cities include Bo (174,354), Kenema (143,137), Koidu (88,000), Makeni (87,679) and Lunsar (22,461).'},
       {t:'p', v:'The largest ethnic groups are the Temne (35.5%) and the Mende (33.2%). Others include the Limba (6.4%), Kono (4.4%), Fullah (3.4%), Loko (2.9%), Koranko (2.8%), Sherbro (2.6%), Mandingo (2.4%) and Krio (1.2%). English is the official language; Krio is the everyday lingua franca.'},
       {t:'site', v:'Language matters commercially. A buyer communicating in English may not realise how much of the on-the-ground conversation happens in Krio, Temne or Mende — and how much can shift in translation. A local representative who speaks the room is not optional.'}
     ]
@@ -1548,7 +1599,7 @@ var A = {
     part: 'Country · People', partKey: 'peo',
     title: 'Freetown\'s Growth and Land Pressure', date: 'September 2026',
     figs: [
-      {n:'1.4 M', l:'Freetown population', c:'c1'},
+      {n:'1.9 M', l:'Freetown agglomeration (2025)', c:'c1'},
       {n:'2025', l:'New planning act', c:'c2'},
       {n:'§ 87', l:'Prohibits unpermitted build', c:'c3'}
     ],
@@ -1571,12 +1622,12 @@ var A = {
     part: 'Country · Economy', partKey: 'eco',
     title: 'The Leone, Inflation and Foreign Exchange', date: 'September 2026',
     figs: [
-      {n:'10.5%', l:'Inflation, end-2025', c:'c1'},
+      {n:'~9.4%', l:'Inflation, 2025', c:'c1'},
       {n:'2022', l:'Currency redenominated', c:'c2'},
       {n:'SLE', l:'New currency code', c:'c3'}
     ],
     body: [
-      {t:'p', v:'Sierra Leone\'s currency is the Leone. In 2022 it was redenominated, with three zeros removed and a new currency code (SLE) introduced. The Leone has historically been volatile against major currencies, and inflation was running at 10.5% at the end of 2025.'},
+      {t:'p', v:'Sierra Leone\'s currency is the Leone. On 1 July 2022 it was redenominated, with three zeros removed and a new currency code (SLE) introduced. The Leone has historically been volatile against major currencies. Inflation declined sharply through 2025, reaching single digits, with the IMF projecting an average of about 9.4% for the year.'},
       {t:'p', v:'For anyone paying from abroad this matters: a quoted price in Leone and a quoted price in dollars are not the same commitment, and the gap between them can move quickly. The National Investment Board Act 2022 provides for the free transfer of funds and protection against expropriation, but the practical mechanics of moving money still require care.'},
       {t:'p', v:'Foreign capital inflows and outflows are subject to review by the financial intelligence authorities. Repatriation of profits is permitted under the investment framework, but documentation and compliance matter.'},
       {t:'site', v:'Agree the currency of payment and the exchange-rate basis in writing before work starts. "The price in Leones" and "the price in dollars" are not the same agreement, and the difference has ended more than one project.'},
@@ -1610,20 +1661,20 @@ var A = {
     figs: [
       {n:'No', l:'Residency requirement', c:'c1'},
       {n:'1', l:'Minimum director', c:'c2'},
-      {n:'Lc 1,000,000', l:'Nominal share capital', c:'c3'},
+      {n:'Le 1,000', l:'Nominal share capital', c:'c3'},
       {n:'3–5 days', l:'Typical registration', c:'c4'}
     ],
     body: [
       {t:'p', v:'The Companies Act 2009 (Act No. 5 of 2009) governs company formation in Sierra Leone. The Corporate Affairs Commission (CAC) is the registrar. A private limited liability company — the most common structure for foreign investors — can be formed with just one shareholder and one director, both of any nationality, with no residency requirement in Sierra Leone.'},
-      {t:'p', v:'The Act specifies a nominal share capital of not less than Lc1,000,000 for a private company, with 25 percent taken by subscribers. In practice, the National Investment Board states there is no minimum paid-in capital requirement for private companies, and a nominal figure is typically used at registration. The articles of association must specify the nature of the business activities.'},
+      {t:'p', v:'The Act specifies a nominal share capital of not less than Lc1,000,000 for a private company — equivalent to Le 1,000 after the 2022 redenomination — with 25 percent taken by subscribers. In practice, the National Investment Board states there is no minimum paid-in capital requirement for private companies, and a nominal figure is typically used at registration. The articles of association must specify the nature of the business activities.'},
       {t:'p', v:'Registration is available through the National Investment Board\'s One-Stop Business Registration Centre or directly with the Corporate Affairs Commission. The typical timeline is 3–5 working days through the NIB, or 2–4 weeks if incorporating directly with the CAC. Registration fees vary by business type and size; check the official fee schedule. After incorporation, a Tax Identification Number (TIN) is issued, and a municipal business licence — initially valid for six months — is required before operations begin.'},
-      {t:'p', v:'Foreign investors often use corporate service providers to handle registration, which may charge between USD 5,000 and USD 6,000. The documents required include a valid ID or passport, business name approval, a completed application form, and payment receipt.'},
+      {t:'p', v:'Foreign investors often use corporate service providers to handle registration. The documents required include a valid ID or passport, business name approval, a completed application form, and payment receipt.'},
       {t:'law', items: [
         {act: 'Companies Act', year: 'No. 5 of 2009; amended 2014',
          entries: [
            {s:'Section 28', v:'Governs company names: no company may be incorporated with a name identical to an existing registered business without consent.'},
            {s:'Directors', v:'Every company must appoint at least one director at the time of incorporation.'},
-           {s:'Capital', v:'Nominal share capital of not less than Lc1,000,000, with 25 percent taken by subscribers.'}
+           {s:'Capital', v:'Nominal share capital of not less than Lc1,000,000 (equivalent to Le 1,000 after redenomination), with 25 percent taken by subscribers.'}
          ]},
         {act: 'National Investment Board Act', year: 'No. 11 of 2022',
          entries: [
@@ -1745,6 +1796,9 @@ function buildArticleChart(containerId) {
     col.addEventListener('focus', activate);
     col.addEventListener('blur', deactivate);
     col.addEventListener('click', activate);
+    col.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+    });
 
     canvas.appendChild(col);
     cols.push(col);
@@ -1806,6 +1860,8 @@ function buildArticleChart(containerId) {
 
 /* ================= ARTICLE VIEW ================= */
 var currentArticleKey = null;
+var lastFocusedRow = null;
+
 function render(key) {
   var a = A[key]; if (!a) return;
   currentArticleKey = key;
@@ -1873,7 +1929,7 @@ function render(key) {
           '</div>' +
         '</div>' +
         '<div class="ac-canvas"></div>' +
-        '<div class="ac-info">' +
+        '<div class="ac-info" aria-live="polite">' +
           '<div>' +
             '<div class="month-name">—</div>' +
             '<div class="month-nums">—</div>' +
@@ -1912,14 +1968,40 @@ function render(key) {
     }
   });
 
+  /* Krio note: show when language is kri and content is English */
+  if (currentLang === 'kri') {
+    var kn = document.createElement('p');
+    kn.className = 'site-note';
+    kn.setAttribute('data-prefix', '● KRI');
+    kn.style.display = 'block';
+    kn.textContent = dict.kriNote;
+    bodyEl.insertBefore(kn, bodyEl.firstChild);
+  }
+
   view.classList.add('open');
   view.scrollTop = 0;
   document.body.style.overflow = 'hidden';
+
+  /* Focus management */
+  document.querySelector('main').setAttribute('aria-hidden', 'true');
+  document.querySelector('footer').setAttribute('aria-hidden', 'true');
+  document.getElementById('article-back').focus();
+}
+
+function closeArticle() {
+  var view = document.getElementById('article-view');
+  view.classList.remove('open');
+  document.body.style.overflow = '';
+  document.querySelector('main').removeAttribute('aria-hidden');
+  document.querySelector('footer').removeAttribute('aria-hidden');
+  if (lastFocusedRow) lastFocusedRow.focus();
+  currentArticleKey = null;
 }
 
 document.querySelectorAll('[data-article]').forEach(function (row) {
   row.addEventListener('click', function (e) {
     e.preventDefault();
+    lastFocusedRow = row;
     render(row.getAttribute('data-article'));
   });
 });
@@ -1927,15 +2009,39 @@ document.querySelectorAll('[data-article]').forEach(function (row) {
 (function () {
   var view = document.getElementById('article-view');
   var back = document.getElementById('article-back');
-  function close() {
-    view.classList.remove('open');
-    document.body.style.overflow = '';
-    currentArticleKey = null;
-  }
-  back.addEventListener('click', close);
+  back.addEventListener('click', closeArticle);
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && view.classList.contains('open')) close();
+    if (e.key === 'Escape' && view.classList.contains('open')) closeArticle();
   });
+  /* Focus trap */
+  view.addEventListener('keydown', function (e) {
+    if (e.key !== 'Tab' || !view.classList.contains('open')) return;
+    var focusable = view.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])');
+    if (!focusable.length) return;
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+})();
+
+/* Hash-based deep linking */
+(function () {
+  function openFromHash() {
+    var hash = window.location.hash.replace('#', '');
+    if (hash && A[hash]) {
+      var row = document.querySelector('[data-article="' + hash + '"]');
+      if (row) lastFocusedRow = row;
+      render(hash);
+    }
+  }
+  window.addEventListener('hashchange', function () {
+    var hash = window.location.hash.replace('#', '');
+    if (hash && A[hash]) { render(hash); }
+    else if (!hash) { closeArticle(); }
+  });
+  /* Open on load if hash present */
+  if (window.location.hash) openFromHash();
 })();
 
 /* Apply saved language on load */
